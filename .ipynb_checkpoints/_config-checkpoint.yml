@@ -1,0 +1,30 @@
+# Site Settings
+title:               Ignacio Magaña Hernandez
+tagline:             Gravitational Wave Physicist
+description:
+baseurl:            #"/"
+url:                #"https://ignaciomagana.github.io/"
+github:
+  url:               #"https://ignaciomagana.github.io/"
+author:
+  name:              "Ignacio Magaña Hernandez"
+  email:             "ignacio.magana@ligo.org"
+  twitter:           "quarkcharmer"
+  github:            "ignaciomagana"
+  linkedin:          ".."
+navigation:
+- title: About
+  url: /about
+- title: Writing
+  url: /writing
+- title: Contact
+  url: /contact
+
+paginate:            5
+disqus:              #"your-disqus"
+
+# Build settings
+markdown:            kramdown
+highlighter:         rouge
+permalink:           none
+gems:                [jekyll-paginate]

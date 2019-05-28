@@ -3,8 +3,4 @@ layout: page
 title: About
 ---
 
-Hi, my name is Ashley Villar! I am a NSF Graduate Research Fellow at Harvard in the Astronomy department. I study the eruptions, mergers and explosions of stars. I'm especially interested in utilizing multiband light curves to understand underly progenitor populations of optical transients.
-
-Most of this website is currently under construction 0:)
-
-Site template: [Lagrange](https://github.com/LeNPaul/Lagrange)
+Hi, my name is Ignacio Magaña Hernandez! I am a NSF Graduate Research Fellow at the University of Wisconsin, Milwaukee. I study gravitational waves with applications mainly related to cosmology and astrophysics. The current focus of my research is the measurement of cosmological parameters such as the Hubble constant using binary black hole standard sirens. We expect that these events will have no associated EM counterpart and as such an statistical inference with galaxy catalogs is possible. I also study strong lensing of gravitational waves and how we can use these lensed events to learn about cosmology since these in general will come from greater distances.

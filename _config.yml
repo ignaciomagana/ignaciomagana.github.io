@@ -1,16 +1,16 @@
 # Site Settings
-title:               Ashley Villar
-tagline:             astronomer
+title:               Ignacio Magaña Hernandez
+tagline:             Gravitational Wave Physicist
 description:
 baseurl:            #"/"
-url:                #"https://villrv.github.io"
+url:                #"https://ignaciomagana.github.io/"
 github:
-  url:               #"https://villrv.github.io/"
+  url:               #"https://ignaciomagana.github.io/"
 author:
-  name:              "Ashley Villar"
-  email:             "vvillar@cfa.harvard.edu"
-  twitter:           "astrovav"
-  github:            "villrv"
+  name:              "Ignacio Magaña Hernandez"
+  email:             "ignacio.magana@ligo.org"
+  twitter:           "quarkcharmer"
+  github:            "ignaciomagana"
   linkedin:          ".."
 navigation:
 - title: About
