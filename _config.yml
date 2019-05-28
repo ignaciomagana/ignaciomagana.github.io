@@ -1,0 +1,30 @@
+# Site Settings
+title:               Ashley Villar
+tagline:             astronomer
+description:
+baseurl:            #"/"
+url:                #"https://villrv.github.io"
+github:
+  url:               #"https://villrv.github.io/"
+author:
+  name:              "Ashley Villar"
+  email:             "vvillar@cfa.harvard.edu"
+  twitter:           "astrovav"
+  github:            "villrv"
+  linkedin:          ".."
+navigation:
+- title: About
+  url: /about
+- title: Writing
+  url: /writing
+- title: Contact
+  url: /contact
+
+paginate:            5
+disqus:              #"your-disqus"
+
+# Build settings
+markdown:            kramdown
+highlighter:         rouge
+permalink:           none
+gems:                [jekyll-paginate]
