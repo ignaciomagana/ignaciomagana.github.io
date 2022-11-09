@@ -8,10 +8,10 @@ github:
   url:               #"https://ignaciomagana.github.io/"
 author:
   name:              "Ignacio Magaña Hernandez"
-  email:             "ignacio.magana@ligo.org"
+  email:             "maganah2@uwm.edu"
   twitter:           "quarkcharmer"
   github:            "ignaciomagana"
-  linkedin:          ".."
+  linkedin:          
 navigation:
 - title: About
   url: /about
