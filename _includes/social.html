@@ -1,0 +1,14 @@
+{%- comment -%}
+  Renders the social/profile icon row from _data/social.yml.
+  Optional param: include.class (extra class on the wrapper).
+{%- endcomment -%}
+<div class="social {{ include.class }}">
+  {%- for s in site.data.social -%}
+    {%- unless s.hidden -%}
+    <a href="{{ s.url }}" aria-label="{{ s.label }}" title="{{ s.label }}"
+       {% unless s.url contains "mailto:" %}rel="me noopener" target="_blank"{% endunless %}>
+      {% include icon.html name=s.icon %}
+    </a>
+    {%- endunless -%}
+  {%- endfor -%}
+</div>

@@ -1,0 +1,44 @@
+# Research themes rendered on the home page and /research/.
+- title: Standard-siren cosmology & the Hubble constant
+  blurb: >-
+    Gravitational waves are self-calibrating "standard sirens" that measure
+    cosmic distances without a distance ladder. I develop <em>dark-siren</em>
+    methods that combine binary black hole mergers with galaxy surveys such as
+    DESI, and <em>spectral-siren</em> techniques that read cosmology directly
+    from the mass distribution of merging black holes — independent routes
+    toward resolving the Hubble tension.
+  tags: [Hubble constant, dark sirens, spectral sirens, DESI, gwcosmo]
+
+- title: Compact-binary populations
+  blurb: >-
+    What is the true distribution of black hole masses, spins, and redshifts?
+    I build non-parametric, data-driven population models — including
+    Gaussian-process methods — that let the data reveal structure without
+    imposing a functional form. This work surfaced a new over-density near
+    70&nbsp;M<sub>&#9737;</sub> and evidence for the onset of the
+    pair-instability supernova mass gap.
+  tags: [populations, Gaussian processes, black hole mass function, pair instability]
+
+- title: Gravitational-wave lensing
+  blurb: >-
+    Gravitational lensing of gravitational waves is an emerging frontier. I
+    created Bayesian frameworks to identify strongly lensed signal pairs in
+    LIGO–Virgo data, and I use lensed binaries to probe the polarization
+    content of gravitational waves and to test general relativity itself.
+  tags: [strong lensing, tests of GR, polarization]
+
+- title: Multi-messenger astrophysics
+  blurb: >-
+    Connecting gravitational waves to their electromagnetic and radio
+    counterparts. I have investigated candidate fast-radio-burst associations,
+    kilonova follow-up of neutron-star merger candidates, and joint ranking
+    statistics that quantify when a coincident signal is astrophysically real.
+  tags: [multi-messenger, kilonovae, fast radio bursts, GW-MMADS]
+
+- title: Tests of gravity & fundamental physics
+  blurb: >-
+    Gravitational waves are precision probes of gravity across cosmological
+    distances. I have constrained the number of spacetime dimensions from the
+    GWTC-3 catalog and tested modified gravitational-wave propagation
+    ("friction") predicted by alternatives to general relativity and ΛCDM.
+  tags: [modified gravity, extra dimensions, GW propagation]

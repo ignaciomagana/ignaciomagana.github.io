@@ -1,30 +1,77 @@
-# Site Settings
-title:               Ignacio Magaña Hernandez
-tagline:             #Gravitational Wave Physicist
-description:
-baseurl:            #"/"
-url:                #"https://ignaciomagana.github.io/"
-github:
-  url:               #"https://ignaciomagana.github.io/"
+# --- Site identity -----------------------------------------------------------
+title: Ignacio Magaña Hernandez
+tagline: Gravitational-wave cosmologist
+description: >-
+  Ignacio Magaña Hernandez is a McWilliams Postdoctoral Fellow at Carnegie
+  Mellon University working on gravitational-wave cosmology, compact-binary
+  populations, and strong gravitational-wave lensing.
 author:
-  name:              "Ignacio Magaña Hernandez"
-  email:             "maganah2@uwm.edu"
-  twitter:           "quarkcharmer"
-  github:            "ignaciomagana"
-  linkedin:          
-navigation:
-- title: About
-  url: /about
-- title: Writing
-  url: /writing
-- title: Contact
-  url: /contact
+  name: Ignacio Magaña Hernandez
+  email: imhernan@andrew.cmu.edu
 
-paginate:            5
-disqus:              #"your-disqus"
+# Full role / affiliation used in the hero and page metadata
+role: McWilliams Postdoctoral Fellow
+affiliation: McWilliams Center for Cosmology & Astrophysics
+institution: Carnegie Mellon University
 
-# Build settings
-markdown:            kramdown
-highlighter:         rouge
-permalink:           none
-gems:                [jekyll-paginate]
+# --- URLs --------------------------------------------------------------------
+# For a user site (repo named <user>.github.io) keep baseurl empty.
+# For a project repo (repo named e.g. "ignacio-website"), set baseurl: "/ignacio-website".
+url: "https://ignaciomagana.github.io"
+baseurl: ""
+
+# --- Build -------------------------------------------------------------------
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+
+sass:
+  style: compressed
+
+permalink: /blog/:year/:month/:slug/
+timezone: America/New_York
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# --- Social / SEO ------------------------------------------------------------
+twitter:
+  username: quarkcharmer
+  card: summary_large_image
+social:
+  name: Ignacio Magaña Hernandez
+  links:
+    - https://github.com/ignaciomagana
+    - https://orcid.org/0000-0003-2362-0459
+    - https://inspirehep.net/authors/1902658
+    - https://x.com/quarkcharmer
+
+# jekyll-feed
+feed:
+  path: /feed.xml
+
+# --- Defaults ----------------------------------------------------------------
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: page
+      image: /assets/img/og-image.png
+
+# Files/dirs Jekyll should not copy into _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+  - .sass-cache
+  - .jekyll-cache

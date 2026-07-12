@@ -1,0 +1,47 @@
+---
+layout: home
+title: Research
+permalink: /research/
+description: >-
+  Research on gravitational-wave standard-siren cosmology, compact-binary
+  populations, gravitational-wave lensing, multi-messenger astrophysics, and
+  tests of gravity.
+---
+
+<section class="section">
+  <div class="container">
+    <p class="section__label">Research</p>
+    <h1>Reading the Universe in gravitational waves</h1>
+    <p class="lead prose">
+      Every compact-binary merger LIGO–Virgo–KAGRA detects is both a ruler and a
+      fossil — encoding how fast the Universe expands and how black holes and
+      neutron stars come to be. My work turns catalogs of these mergers into
+      statements about cosmology, populations, and gravity itself.
+    </p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container">
+    <div class="themes">
+      {% for t in site.data.research %}
+      <div class="theme">
+        <h2 class="theme__title">{{ t.title }}</h2>
+        <p class="theme__body">{{ t.blurb }}</p>
+        <ul class="tags">{% for tag in t.tags %}<li class="tag">{{ tag }}</li>{% endfor %}</ul>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="callout" style="margin-top:3rem">
+      <p style="margin:0">
+        Much of this research is built on open-source tools I develop and
+        contribute to — including <code>gwcosmo</code> for standard-siren
+        cosmology and binned Gaussian-process methods for population inference.
+        See the <a href="{{ '/publications/' | relative_url }}">publications</a>
+        for the full record, or my
+        <a href="https://github.com/ignaciomagana">GitHub</a> for code.
+      </p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,218 @@
+# ---------------------------------------------------------------------------
+#  Publications.  `me` defaults to "I. Magaña Hernandez" (bolded in author list).
+#  group: first-author | coauthored | collaboration
+#  selected: true  -> also featured on the home page
+#  Full record: https://inspirehep.net/authors/1902658
+# ---------------------------------------------------------------------------
+
+# ===== First & second author =====
+- group: first-author
+  title: "Dark siren cosmology with the Dark Energy Spectroscopic Instrument"
+  authors: "I. Magaña Hernandez, A. Palmese, et al."
+  year: 2025
+  status: "DESI internal review"
+
+- group: first-author
+  selected: true
+  title: "Lucky Strikes: On the origins of GW190814 through isolated binary evolution"
+  authors: "I. Magaña Hernandez, K. Breivik"
+  year: 2025
+  arxiv: "2511.16648"
+  status: "Submitted to ApJL"
+
+- group: first-author
+  selected: true
+  title: "Spectral siren cosmology from gravitational-wave observations in GWTC-4.0"
+  authors: "I. Magaña Hernandez, A. Palmese"
+  year: 2025
+  arxiv: "2509.03607"
+  status: "Submitted to PRL"
+
+- group: first-author
+  selected: true
+  title: "Astrophysics-informed Gaussian processes for gravitational-wave populations: evidence for the onset of the pair-instability supernova mass gap"
+  authors: "I. Magaña Hernandez, A. Palmese"
+  year: 2025
+  arxiv: "2508.19208"
+  status: "Submitted to PRL"
+
+- group: first-author
+  selected: true
+  title: "A new bump in the night: evidence of a new feature in the binary black hole mass distribution at 70 M⊙ from gravitational-wave observations"
+  authors: "I. Magaña Hernandez, A. Palmese"
+  year: 2025
+  venue: "Phys. Rev. D 111, 083031"
+  arxiv: "2407.02460"
+  doi: "https://doi.org/10.1103/PhysRevD.111.083031"
+
+- group: first-author
+  title: "Searching for binary black hole sub-populations in gravitational-wave data using binned Gaussian processes"
+  authors: "A. Ray, I. Magaña Hernandez, K. Breivik, J. D. E. Creighton"
+  year: 2025
+  venue: "ApJ 991, 17"
+  arxiv: "2404.03166"
+  doi: "https://doi.org/10.3847/1538-4357/adf22a"
+
+- group: first-author
+  selected: true
+  title: "Beyond gaps and bumps: spectral siren cosmology with non-parametric population models"
+  authors: "I. Magaña Hernandez, A. Ray"
+  year: 2024
+  arxiv: "2404.02522"
+  status: "Submitted to Phys. Rev. D"
+
+- group: first-author
+  title: "On the association of GW190425 with its potential electromagnetic counterpart FRB 20190425A"
+  authors: "I. Magaña Hernandez, V. D'Emilio, S. Morisaki, M. Bhardwaj, A. Palmese"
+  year: 2024
+  venue: "ApJL 971, L5"
+  arxiv: "2404.02496"
+  doi: "https://doi.org/10.3847/2041-8213/ad5b4c"
+
+- group: first-author
+  selected: true
+  title: "Non-parametric inference of the population of compact binaries from gravitational-wave observations using binned Gaussian processes"
+  authors: "A. Ray, I. Magaña Hernandez, S. Mohite, J. D. E. Creighton, S. Kapadia"
+  year: 2023
+  venue: "ApJ 957, 37"
+  arxiv: "2304.08046"
+
+- group: first-author
+  title: "Measuring the polarization content of gravitational waves with strongly lensed binary black hole mergers"
+  authors: "I. Magaña Hernandez"
+  year: 2023
+  arxiv: "2211.01272"
+  status: "Submitted to Phys. Rev. D"
+
+- group: first-author
+  title: "Constraining the number of spacetime dimensions from GWTC-3 binary black hole mergers"
+  authors: "I. Magaña Hernandez"
+  year: 2023
+  venue: "Phys. Rev. D 107, 084033"
+  arxiv: "2112.07650"
+  doi: "https://doi.org/10.1103/PhysRevD.107.084033"
+
+- group: first-author
+  selected: true
+  title: "A Bayesian statistical framework for identifying strongly-lensed gravitational-wave signals"
+  authors: "R. K. L. Lo, I. Magaña Hernandez"
+  year: 2023
+  venue: "Phys. Rev. D 107, 123015"
+  arxiv: "2104.09339"
+  doi: "https://doi.org/10.1103/PhysRevD.107.123015"
+
+- group: first-author
+  title: "Identifying strong gravitational-wave lensing during the second observing run of Advanced LIGO and Advanced Virgo"
+  authors: "X. Liu, I. Magaña Hernandez, J. D. E. Creighton"
+  year: 2021
+  venue: "ApJ 908, 97"
+  arxiv: "2009.06539"
+
+- group: first-author
+  selected: true
+  title: "Cosmological inference using gravitational-wave standard sirens: a mock data analysis"
+  authors: "R. Gray, I. Magaña Hernandez, et al."
+  year: 2020
+  venue: "Phys. Rev. D 101, 122001"
+  arxiv: "1908.06050"
+  doi: "https://doi.org/10.1103/PhysRevD.101.122001"
+
+# ===== Selected co-authored =====
+- group: coauthored
+  title: "Kilonova constraints for the LIGO/Virgo/KAGRA neutron star merger candidate S250206dm: GW-MMADS observations"
+  authors: "L. Hu, et al. (incl. I. Magaña Hernandez)"
+  year: 2025
+  venue: "ApJL 990, L46"
+  arxiv: "2506.22626"
+  doi: "https://doi.org/10.3847/2041-8213/adfd49"
+
+- group: coauthored
+  title: "Challenges for fast radio bursts as multi-messenger sources from binary neutron star mergers"
+  authors: "M. Bhardwaj, A. Palmese, I. Magaña Hernandez, V. D'Emilio, S. Morisaki"
+  year: 2024
+  venue: "ApJ 977, 122"
+  arxiv: "2306.00948"
+
+- group: coauthored
+  title: "A dark siren measurement of the Hubble constant with the LIGO/Virgo event GW190412 and DESI galaxies"
+  authors: "W. Ballard, A. Palmese, I. Magaña Hernandez, et al."
+  year: 2023
+  venue: "Res. Notes AAS 7, 250"
+  arxiv: "2311.13062"
+
+- group: coauthored
+  title: "Follow-up analyses to the O3 LIGO–Virgo–KAGRA lensing searches"
+  authors: "J. Janquart, et al. (incl. I. Magaña Hernandez)"
+  year: 2023
+  venue: "MNRAS 526, 3832"
+  arxiv: "2306.03827"
+
+- group: coauthored
+  title: "Localization of binary neutron star mergers with a single Cosmic Explorer"
+  authors: "P. Baral, S. Morisaki, I. Magaña Hernandez, J. D. E. Creighton"
+  year: 2023
+  venue: "Phys. Rev. D 108, 043010"
+  arxiv: "2304.09889"
+  doi: "https://doi.org/10.1103/PhysRevD.108.043010"
+
+- group: coauthored
+  title: "The Hitchhiker's guide to the galaxy catalog approach for dark siren gravitational-wave cosmology"
+  authors: "J. Gair, et al. (incl. I. Magaña Hernandez)"
+  year: 2023
+  venue: "AJ 166, 22"
+  arxiv: "2212.08694"
+
+- group: coauthored
+  title: "Rapid model comparison of equations of state from gravitational-wave observation of binary neutron star coalescences"
+  authors: "S. Ghosh, X. Liu, J. D. E. Creighton, I. Magaña Hernandez, et al."
+  year: 2021
+  venue: "Phys. Rev. D 104, 083003"
+  arxiv: "2104.08681"
+  doi: "https://doi.org/10.1103/PhysRevD.104.083003"
+
+- group: coauthored
+  title: "Gravitational-wave friction in light of GW170817 and GW190521"
+  authors: "S. Mastrogiovanni, L. Haegel, K. Karathanasis, I. Magaña Hernandez, D. A. Steer"
+  year: 2021
+  venue: "JCAP 02, 043"
+  arxiv: "2010.04047"
+
+- group: coauthored
+  title: "Current observations are insufficient to confidently associate the binary black hole merger GW190521 with AGN J124942.3+344929"
+  authors: "G. Ashton, K. Ackley, I. Magaña Hernandez, et al."
+  year: 2021
+  venue: "Class. Quantum Grav. 38, 235004"
+  arxiv: "2009.12346"
+
+- group: coauthored
+  title: "Bayesian inference for compact binary coalescences with bilby: validation and application to the first LIGO–Virgo gravitational-wave transient catalogue"
+  authors: "I. M. Romero-Shaw, et al. (incl. I. Magaña Hernandez)"
+  year: 2020
+  venue: "MNRAS 499, 3295"
+  arxiv: "2006.00714"
+
+# ===== LIGO–Virgo–KAGRA papers I led / strongly contributed to =====
+- group: collaboration
+  selected: true
+  title: "GW190814: gravitational waves from the coalescence of a 23 M⊙ black hole with a 2.6 M⊙ compact object"
+  authors: "LIGO Scientific & Virgo Collaborations (incl. I. Magaña Hernandez)"
+  year: 2020
+  venue: "ApJL 896, L44"
+  arxiv: "2006.12611"
+  note: "Led and wrote the Hubble constant analysis."
+
+- group: collaboration
+  title: "A gravitational-wave measurement of the Hubble constant following the second observing run of Advanced LIGO and Virgo"
+  authors: "LIGO Scientific & Virgo Collaborations (incl. I. Magaña Hernandez)"
+  year: 2021
+  venue: "ApJ 909, 218"
+  arxiv: "1908.06060"
+  note: "Paper-writing and analysis-team member."
+
+- group: collaboration
+  title: "First measurement of the Hubble constant from a dark standard siren using DES galaxies and the LIGO/Virgo merger GW170814"
+  authors: "M. Soares-Santos, A. Palmese, et al. & LIGO Scientific & Virgo Collaborations (incl. I. Magaña Hernandez)"
+  year: 2019
+  venue: "ApJL 876, L7"
+  arxiv: "1901.01540"
+  note: "Validated the analysis with gwcosmo."

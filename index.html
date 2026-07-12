@@ -1,35 +1,166 @@
 ---
-layout: default
-title: Home
+layout: home
+title: About
+description: >-
+  Ignacio Magaña Hernandez — McWilliams Postdoctoral Fellow at Carnegie Mellon
+  University working on gravitational-wave cosmology, compact-binary
+  populations, and gravitational-wave lensing.
 ---
 
-{% for post in paginator.posts %}
-<div class="posts">
-  <h1>
-    <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
-  </h1>
-  {% if post.image.teaser %}
-    <a href="{{ site.github.url }}{{ post.url }}"><img src="{{ site.github.url }}/images/{{ post.image.teaser }}"></a>
-  {% endif %}
-  <p>
-    {{ post.content | strip_html | truncate: 350 }} <a href="{{ site.github.url }}{{ post.url }}">Read more</a>
-    <span class="post-date" style="margin-top:3px"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
-  </p>
-</div>
-{% endfor %}
+<!-- ============================== HERO ============================== -->
+<section class="hero">
+  <div class="container hero__inner">
+    <div class="hero__text">
+      <p class="hero__eyebrow">McWilliams Postdoctoral Fellow · Carnegie Mellon</p>
+      <h1 class="hero__name">Ignacio&nbsp;Magaña&nbsp;Hernandez</h1>
+      <p class="hero__role">Gravitational-wave cosmologist</p>
+      <p class="hero__affil">
+        McWilliams Center for Cosmology &amp; Astrophysics, Carnegie Mellon University.
+      </p>
+      <p class="hero__lede">
+        I measure the expansion of the Universe with gravitational-wave
+        <em>standard sirens</em>, and map the hidden population of merging
+        black holes with data-driven statistical methods.
+      </p>
+      <div class="actions">
+        <a class="btn btn--primary" href="{{ '/cv/' | relative_url }}">{% include icon.html name="cv" %} Curriculum Vitae</a>
+        <a class="btn" href="mailto:imhernan@andrew.cmu.edu">{% include icon.html name="email" %} Email</a>
+        {% include social.html %}
+      </div>
+    </div>
 
-<!-- Pagination links -->
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-button pagination-active" href="{{ site.github.url }}{{ paginator.next_page_path }}" class="next">Older</a>
-  {% else %}
-    <span class="pagination-button">Older</span>
-  {% endif %}
+    <div class="hero__art" aria-hidden="true">
+      <svg viewBox="0 0 240 240" class="hero__emblem" role="img" aria-label="Gravitational waves radiating from a binary merger">
+        <defs>
+          <radialGradient id="hg" cx="50%" cy="50%" r="62%">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="100%" stop-color="var(--surface)"/>
+          </radialGradient>
+        </defs>
+        <circle cx="120" cy="120" r="118" fill="url(#hg)" stroke="var(--border)"/>
+        <g fill="none" stroke="var(--accent)" stroke-width="1.5"
+           transform="rotate(-22 120 120)">
+          <ellipse cx="120" cy="120" rx="30"  ry="19"  opacity="0.9"/>
+          <ellipse cx="120" cy="120" rx="50"  ry="31"  opacity="0.66"/>
+          <ellipse cx="120" cy="120" rx="70"  ry="43"  opacity="0.46"/>
+          <ellipse cx="120" cy="120" rx="90"  ry="55"  opacity="0.30"/>
+          <ellipse cx="120" cy="120" rx="108" ry="66"  opacity="0.17"/>
+        </g>
+        <g transform="rotate(-22 120 120)">
+          <circle cx="102" cy="120" r="6.5" fill="var(--accent-strong)"/>
+          <circle cx="138" cy="120" r="6.5" fill="var(--accent-strong)"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
 
-  {% if paginator.previous_page %}
-    <a class="pagination-button pagination-active" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">Newer</a>
-    {% else %}
-      <span class="pagination-button">Newer</span>
-  {% endif %}
+<!-- ============================== ABOUT ============================== -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="prose">
+      <p class="lead">
+        I'm a gravitational-wave astrophysicist working at the intersection of
+        cosmology, compact-object populations, and statistical inference.
+      </p>
+      <p>
+        Using the black-hole and neutron-star mergers detected by
+        LIGO–Virgo–KAGRA — together with galaxy surveys like DESI — I develop
+        methods to measure the Hubble constant independently of the traditional
+        cosmic distance ladder, one of the most promising handles on the
+        ongoing <strong>Hubble tension</strong>.
+      </p>
+      <blockquote>
+        Binary black hole mergers are electromagnetically dark — they're called
+        dark sirens — so we need additional information to infer their redshift.
+      </blockquote>
+      <p>
+        As a graduate student I joined the LIGO Scientific Collaboration's main
+        analysis team and co-developed <code>gwcosmo</code>, a tool for
+        measuring the Hubble constant from dark sirens. My current work builds
+        non-parametric population models that let gravitational-wave data speak
+        for themselves — revealing new features in the black-hole mass spectrum
+        and sharpening what mergers can tell us about cosmology and gravity.
+      </p>
+    </div>
+  </div>
+</section>
 
-</div>
+<!-- ============================== METRICS ============================== -->
+<section class="section section--tight">
+  <div class="container">
+    <ul class="stats">
+      <li class="stat"><div class="stat__num">76</div><div class="stat__label">Publications</div></li>
+      <li class="stat"><div class="stat__num">44k+</div><div class="stat__label">Citations</div></li>
+      <li class="stat"><div class="stat__num">52</div><div class="stat__label">h-index</div></li>
+    </ul>
+    <p class="muted center" style="margin-top:1rem;font-size:0.85rem">
+      As of July 2026, via
+      <a href="https://inspirehep.net/authors/1902658">INSPIRE-HEP</a>
+      (including LIGO–Virgo–KAGRA collaboration papers).
+    </p>
+  </div>
+</section>
+
+<!-- ============================== RESEARCH ============================== -->
+<section class="section" id="research">
+  <div class="container">
+    <div class="section__head">
+      <div>
+        <p class="section__label">Research</p>
+        <h2>What I work on</h2>
+      </div>
+      <a class="section__more" href="{{ '/research/' | relative_url }}">Read more {% include icon.html name="arrow" %}</a>
+    </div>
+    <div class="themes">
+      {% for t in site.data.research %}
+      <div class="theme">
+        <h3 class="theme__title">{{ t.title }}</h3>
+        <p class="theme__body">{{ t.blurb }}</p>
+        <ul class="tags">{% for tag in t.tags %}<li class="tag">{{ tag }}</li>{% endfor %}</ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============================== SELECTED PUBLICATIONS ============================== -->
+<section class="section" id="selected">
+  <div class="container">
+    <div class="section__head">
+      <div>
+        <p class="section__label">Selected work</p>
+        <h2>Featured publications</h2>
+      </div>
+      <a class="section__more" href="{{ '/publications/' | relative_url }}">All publications {% include icon.html name="arrow" %}</a>
+    </div>
+    <ul class="pub-list">
+      {% assign featured = site.data.publications | where: "selected", true %}
+      {% for pub in featured %}{% include pub.html pub=pub %}{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<!-- ============================== LATEST POSTS ============================== -->
+{% if site.posts.size > 0 %}
+<section class="section" id="writing">
+  <div class="container">
+    <div class="section__head">
+      <div>
+        <p class="section__label">Writing</p>
+        <h2>From the blog</h2>
+      </div>
+      <a class="section__more" href="{{ '/blog/' | relative_url }}">All posts {% include icon.html name="arrow" %}</a>
+    </div>
+    <ul class="post-list">
+      {% for post in site.posts limit:2 %}
+      <li class="post-item">
+        <div class="post-item__date">{{ post.date | date: "%B %-d, %Y" }}</div>
+        <h3 class="post-item__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p class="post-item__excerpt">{{ post.subtitle | default: post.excerpt | strip_html | truncate: 160 }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}

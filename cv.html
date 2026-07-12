@@ -1,0 +1,34 @@
+---
+layout: home
+title: Curriculum Vitae
+permalink: /cv/
+description: Curriculum vitae of Ignacio Magaña Hernandez.
+---
+
+<section class="section">
+  <div class="container">
+    <p class="section__label">Curriculum Vitae</p>
+    <h1>Curriculum Vitae</h1>
+    <p class="lead prose">
+      A full PDF CV — education, appointments, publications, talks, awards,
+      teaching, and mentoring.
+    </p>
+    <div class="actions" style="margin-top:1.5rem">
+      <a class="btn btn--primary" href="{{ '/assets/cv.pdf' | relative_url }}">{% include icon.html name="cv" %} Download PDF</a>
+      <a class="btn" href="{{ '/assets/cv.pdf' | relative_url }}" target="_blank" rel="noopener">Open in new tab {% include icon.html name="arrow" %}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container">
+    <div class="pdf-frame">
+      <object data="{{ '/assets/cv.pdf' | relative_url }}#view=FitH" type="application/pdf" aria-label="Curriculum Vitae PDF">
+        <p class="muted">
+          Your browser can't display the embedded PDF.
+          <a href="{{ '/assets/cv.pdf' | relative_url }}">Download the CV instead.</a>
+        </p>
+      </object>
+    </div>
+  </div>
+</section>

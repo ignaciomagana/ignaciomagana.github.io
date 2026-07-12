@@ -1,0 +1,334 @@
+// ---------------------------------------------------------------------------
+//  Components
+// ---------------------------------------------------------------------------
+
+// --- Hero -------------------------------------------------------------------
+.hero {
+  position: relative;
+  padding-block: clamp(var(--space-7), 4vw, var(--space-9)) var(--space-8);
+  overflow: hidden;
+}
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  align-items: center;
+}
+@media (min-width: $bp-md) {
+  .hero__inner { grid-template-columns: 1fr auto; gap: var(--space-8); }
+}
+.hero__eyebrow {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-4);
+}
+.hero__name {
+  margin: 0 0 var(--space-3);
+  line-height: 1.02;
+}
+.hero__role {
+  font-family: var(--font-serif);
+  font-size: clamp(1.15rem, 1rem + 0.8vw, 1.5rem);
+  font-style: italic;
+  color: var(--text-soft);
+  margin-bottom: var(--space-2);
+}
+.hero__affil {
+  color: var(--muted);
+  margin-bottom: var(--space-5);
+  max-width: 34rem;
+}
+.hero__lede {
+  font-size: 1.1rem;
+  color: var(--text-soft);
+  max-width: 38rem;
+  margin-bottom: var(--space-6);
+}
+.hero__portrait {
+  width: clamp(140px, 34vw, 210px);
+  aspect-ratio: 1 / 1;
+  border-radius: 999px;
+  object-fit: cover;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  justify-self: center;
+}
+
+.hero__art { justify-self: center; }
+.hero__emblem {
+  width: clamp(170px, 30vw, 250px);
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 10px 30px rgba(47, 59, 143, 0.10));
+}
+@media (max-width: $bp-md) {
+  .hero__emblem { width: 150px; }
+}
+
+// A faint gravitational-wave ripple flourish behind the hero
+.hero__ripple {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.5;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 40%, #000 60%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 40%, #000 60%, transparent);
+}
+
+// --- Buttons / quick links --------------------------------------------------
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.94rem;
+  font-weight: 500;
+  padding: 0.55rem 1.05rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: #fff;
+  transition: border-color 0.15s var(--ease), background 0.15s var(--ease),
+              color 0.15s var(--ease), transform 0.15s var(--ease);
+  &:hover {
+    text-decoration: none;
+    border-color: var(--accent-line);
+    background: var(--accent-soft);
+    color: var(--accent-strong);
+  }
+}
+.btn svg { width: 1rem; height: 1rem; }
+.btn--primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  &:hover { background: var(--accent-strong); border-color: var(--accent-strong); color: #fff; }
+}
+
+// --- Social icon row --------------------------------------------------------
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  align-items: center;
+}
+.social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem; height: 2.4rem;
+  color: var(--muted);
+  border-radius: 999px;
+  transition: color 0.15s var(--ease), background 0.15s var(--ease);
+  &:hover { color: var(--accent); background: var(--accent-soft); }
+}
+.social svg { width: 1.2rem; height: 1.2rem; }
+
+// --- Stat row (metrics) -----------------------------------------------------
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.stat {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: var(--space-5) var(--space-4);
+  text-align: center;
+}
+.stat__num {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.25rem);
+  line-height: 1;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+}
+.stat__label {
+  font-size: 0.82rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+.stat__sub { font-size: 0.74rem; color: var(--faint); }
+
+// --- Research themes --------------------------------------------------------
+.themes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+@media (min-width: $bp-md) {
+  .themes { grid-template-columns: 1fr 1fr; gap: var(--space-6); }
+}
+.theme {
+  padding: var(--space-5) 0 0;
+  border-top: 2px solid var(--accent-line);
+}
+.theme__title { margin: 0 0 var(--space-2); font-size: 1.22rem; }
+.theme__body { color: var(--text-soft); margin: 0 0 var(--space-3); }
+
+// --- Tag chips --------------------------------------------------------------
+.tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0; padding: 0; list-style: none; }
+.tag {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-line);
+  border-radius: 999px;
+  padding: 0.18rem 0.6rem;
+  letter-spacing: 0.01em;
+}
+
+// --- Publications -----------------------------------------------------------
+.pub-group__title {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: var(--space-6) 0 var(--space-4);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--hairline);
+}
+.pub-list { list-style: none; margin: 0; padding: 0; }
+.pub {
+  display: grid;
+  grid-template-columns: 3.2rem 1fr;
+  gap: var(--space-4);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--hairline);
+}
+.pub:last-child { border-bottom: 0; }
+.pub__year {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--faint);
+  padding-top: 0.05rem;
+}
+.pub__title {
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  line-height: 1.3;
+  margin: 0 0 0.25rem;
+  a { color: var(--text); }
+  a:hover { color: var(--accent); }
+}
+.pub__authors { font-size: 0.92rem; color: var(--muted); margin: 0 0 0.15rem; }
+.pub__authors .me { color: var(--text); font-weight: 600; }
+.pub__venue { font-size: 0.9rem; color: var(--text-soft); font-style: italic; }
+.pub__links {
+  margin-top: 0.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.6rem;
+  align-items: center;
+}
+.pub__link {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--accent);
+  border: 1px solid var(--accent-line);
+  border-radius: 6px;
+  padding: 0.08rem 0.45rem;
+  &:hover { background: var(--accent-soft); text-decoration: none; }
+}
+.pub__cite { font-size: 0.8rem; color: var(--faint); }
+.pub__note {
+  margin: 0.4rem 0 0;
+  font-size: 0.86rem;
+  color: var(--accent-strong);
+  font-style: italic;
+}
+.pub__badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+  border-radius: 5px;
+  padding: 0.08rem 0.4rem;
+}
+@media (max-width: $bp-sm) {
+  .pub { grid-template-columns: 1fr; gap: var(--space-1); }
+  .pub__year { padding-top: 0; font-size: 0.9rem; }
+}
+
+// --- Talks ------------------------------------------------------------------
+.talks { list-style: none; margin: 0; padding: 0; }
+.talk {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.3rem var(--space-4);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--hairline);
+  align-items: baseline;
+}
+.talk:last-child { border-bottom: 0; }
+.talk__venue { font-weight: 600; color: var(--text); }
+.talk__title { grid-column: 1 / -1; color: var(--text-soft); font-family: var(--font-serif); font-style: italic; }
+.talk__date { color: var(--faint); font-size: 0.88rem; white-space: nowrap; text-align: right; }
+
+// --- Post list --------------------------------------------------------------
+.post-list { list-style: none; margin: 0; padding: 0; }
+.post-item {
+  padding: var(--space-5) 0;
+  border-bottom: 1px solid var(--hairline);
+}
+.post-item:last-child { border-bottom: 0; }
+.post-item__date { font-size: 0.85rem; color: var(--muted); letter-spacing: 0.02em; }
+.post-item__title { font-size: 1.35rem; margin: 0.2rem 0 0.3rem; }
+.post-item__excerpt { color: var(--text-soft); margin: 0; }
+
+// --- Long-form article ------------------------------------------------------
+.article { padding-block: var(--space-7) var(--space-8); }
+.article__header { margin-bottom: var(--space-6); }
+.article__meta { color: var(--muted); font-size: 0.9rem; margin-bottom: var(--space-3); }
+.article__body {
+  h2 { margin-top: var(--space-7); }
+  h3 { margin-top: var(--space-6); }
+  img { border-radius: var(--radius-sm); margin-block: var(--space-5); }
+}
+.backlink { display: inline-block; margin-bottom: var(--space-5); font-size: 0.9rem; }
+
+// --- Callout / pull quote ---------------------------------------------------
+.callout {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-sm);
+  padding: var(--space-5);
+  margin-block: var(--space-6);
+}
+.callout p:last-child { margin-bottom: 0; }
+
+// --- Embedded PDF (CV) ------------------------------------------------------
+.pdf-frame {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+}
+.pdf-frame object { width: 100%; height: 85vh; max-height: 1000px; display: block; }
+
+// --- Utility ----------------------------------------------------------------
+.lead { font-size: 1.15rem; color: var(--text-soft); }
+.muted { color: var(--muted); }
+.center { text-align: center; }
+.mt-0 { margin-top: 0; }
+.stack > * + * { margin-top: var(--space-4); }

@@ -1,7 +1,14 @@
-<header class="masthead">
-  <h3 class="masthead-title">
-    <a href="{{ site.github.url }}/">{{ site.title }}</a>
-    <small class="masthead-subtitle">{{ site.tagline }}</small>
-    {% include menu.html %}
-  </h3>
+{%- assign u = page.url | remove_first: site.baseurl -%}
+<header class="site-nav">
+  <nav class="container site-nav__inner" aria-label="Primary">
+    <a class="site-nav__brand" href="{{ '/' | relative_url }}">Ignacio&nbsp;Magaña&nbsp;Hernandez</a>
+    <ul class="site-nav__links">
+      <li><a href="{{ '/' | relative_url }}"{% if u == "/" %} aria-current="page"{% endif %}>About</a></li>
+      <li><a href="{{ '/research/' | relative_url }}"{% if u contains "/research" %} aria-current="page"{% endif %}>Research</a></li>
+      <li><a href="{{ '/publications/' | relative_url }}"{% if u contains "/publications" %} aria-current="page"{% endif %}>Publications</a></li>
+      <li class="nav-optional"><a href="{{ '/talks/' | relative_url }}"{% if u contains "/talks" %} aria-current="page"{% endif %}>Talks</a></li>
+      <li class="nav-optional"><a href="{{ '/blog/' | relative_url }}"{% if u contains "/blog" %} aria-current="page"{% endif %}>Blog</a></li>
+      <li><a href="{{ '/cv/' | relative_url }}"{% if u contains "/cv" %} aria-current="page"{% endif %}>CV</a></li>
+    </ul>
+  </nav>
 </header>

@@ -1,0 +1,36 @@
+{%- comment -%}
+  Renders a single publication list item.
+  Usage: {% include pub.html pub=item %}
+  Expected fields on `pub`: title, authors, me, year, venue, status,
+  arxiv, doi, inspire, cites, badge.
+{%- endcomment -%}
+{%- assign pub = include.pub -%}
+{%- assign me = pub.me | default: "I. Magaña Hernandez" -%}
+{%- capture me_html -%}<span class="me">{{ me }}</span>{%- endcapture -%}
+<li class="pub">
+  <div class="pub__year">{{ pub.year }}</div>
+  <div class="pub__main">
+    <h3 class="pub__title">
+      {%- if pub.arxiv -%}
+        <a href="https://arxiv.org/abs/{{ pub.arxiv }}">{{ pub.title }}</a>
+      {%- elsif pub.doi -%}
+        <a href="{{ pub.doi }}">{{ pub.title }}</a>
+      {%- else -%}
+        {{ pub.title }}
+      {%- endif -%}
+    </h3>
+    <p class="pub__authors">{{ pub.authors | replace: me, me_html }}</p>
+    {%- if pub.venue or pub.status -%}
+      <div class="pub__venue">
+        {{ pub.venue }}{% if pub.venue and pub.status %} · {% endif %}{% if pub.status %}<span class="pub__badge">{{ pub.status }}</span>{% endif %}
+      </div>
+    {%- endif -%}
+    <div class="pub__links">
+      {%- if pub.arxiv -%}<a class="pub__link" href="https://arxiv.org/abs/{{ pub.arxiv }}">arXiv:{{ pub.arxiv }}</a>{%- endif -%}
+      {%- if pub.doi -%}<a class="pub__link" href="{{ pub.doi }}">Journal</a>{%- endif -%}
+      {%- if pub.inspire -%}<a class="pub__link" href="{{ pub.inspire }}">INSPIRE</a>{%- endif -%}
+      {%- if pub.cites and pub.cites > 0 -%}<span class="pub__cite">{{ pub.cites }} citation{% if pub.cites != 1 %}s{% endif %}</span>{%- endif -%}
+    </div>
+    {%- if pub.note -%}<p class="pub__note">{{ pub.note }}</p>{%- endif -%}
+  </div>
+</li>

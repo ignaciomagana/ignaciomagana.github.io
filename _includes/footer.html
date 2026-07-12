@@ -1,15 +1,20 @@
-<footer class="footer">
-  {% if site.author.github %}
-    <a href="https://github.com/{{site.author.github}}"><i class="fa fa-github" aria-hidden="true" target="_blank"></i></a>
-  {% endif %}
-  {% if site.author.twitter %}
-    <a href="https://twitter.com/{{site.author.twitter}}"><i class="fa fa-twitter" aria-hidden="true" target="_blank"></i></a>
-  {% endif %}
-  {% if site.author.linkedin %}
-    <a href="https://linkedin.com/in/{{site.author.linkedin}}"><i class="fa fa-linkedin" aria-hidden="true" target="_blank"></i></a>
-  {% endif %}
-  {% if site.author.email %}
-    <a href="mailto:{{site.author.email}}"><i class="fa fa-envelope" aria-hidden="true" target="_blank"></i></a>
-  {% endif %}
-  <div class="post-date"><a href="{{ site.github.url }}/menu/about.html">{{ site.title }}</a></div>
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div class="site-footer__meta">
+        <div class="site-footer__name">Ignacio Magaña Hernandez</div>
+        {{ site.role }}<br>
+        {{ site.affiliation }}<br>
+        {{ site.institution }} · Pittsburgh, PA
+      </div>
+      <div class="site-footer__meta">
+        <div class="site-footer__name" style="font-size:1rem">Elsewhere</div>
+        {% include social.html %}
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span>© {{ 'now' | date: "%Y" }} Ignacio Magaña Hernandez</span>
+      <span>Built with Jekyll · <a href="{{ '/feed.xml' | relative_url }}">RSS</a></span>
+    </div>
+  </div>
 </footer>

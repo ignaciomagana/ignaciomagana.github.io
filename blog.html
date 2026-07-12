@@ -1,0 +1,36 @@
+---
+layout: home
+title: Blog
+permalink: /blog/
+description: Notes and writing by Ignacio Magaña Hernandez on gravitational-wave astrophysics and cosmology.
+---
+
+<section class="section">
+  <div class="container">
+    <p class="section__label">Writing</p>
+    <h1>Blog</h1>
+    <p class="lead prose">
+      Occasional notes on gravitational-wave cosmology, statistical methods,
+      and research updates.
+    </p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container">
+    {% if site.posts.size > 0 %}
+    <ul class="post-list prose" style="max-width:46rem">
+      {% for post in site.posts %}
+      <li class="post-item">
+        <div class="post-item__date">{{ post.date | date: "%B %-d, %Y" }}</div>
+        <h2 class="post-item__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <p class="post-item__excerpt">{{ post.subtitle | default: post.excerpt | strip_html | truncate: 200 }}</p>
+        <a href="{{ post.url | relative_url }}">Read more {% include icon.html name="arrow" %}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="muted">No posts yet — check back soon.</p>
+    {% endif %}
+  </div>
+</section>

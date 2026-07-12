@@ -1,26 +1,22 @@
-<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
 
-  <title>
-    {% if page.title == "Home" %}
-      {{ site.title }} | {{ site.tagline }}
-    {% else %}
-      {{ page.title }} | {{ site.title }}
-    {% endif %}
-  </title>
+{%- comment -%} SEO, canonical, Open Graph, Twitter cards {%- endcomment -%}
+{% seo %}
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+{%- comment -%} Fonts {%- endcomment -%}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
 
-  <link rel="stylesheet" href="{{ site.github.url }}/css/main.css">
-  <link rel="stylesheet" href="{{ site.github.url }}/css/syntax.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+{%- comment -%} Styles {%- endcomment -%}
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
-  <script type="text/javascript" async
-    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+{%- comment -%} Icons {%- endcomment -%}
+<link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="alternate icon" href="{{ '/assets/img/favicon.png' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/assets/img/favicon.png' | relative_url }}">
 
-  {% include google_analytics.html %}
-
-</head>
+{%- feed_meta -%}

@@ -1,0 +1,19 @@
+# Profile / contact links shown in the hero, footer, and contact areas.
+# Reorder freely; set `hidden: true` on any entry to hide it without deleting.
+- label: Email
+  url: "mailto:imhernan@andrew.cmu.edu"
+  icon: email
+- label: GitHub
+  url: "https://github.com/ignaciomagana"
+  icon: github
+- label: ORCID
+  url: "https://orcid.org/0000-0003-2362-0459"
+  icon: orcid
+- label: INSPIRE-HEP
+  url: "https://inspirehep.net/authors/1902658"
+  icon: inspire
+- label: Twitter / X
+  url: "https://x.com/quarkcharmer"
+  icon: twitter
+  # Carried over from the previous site — set hidden: true to remove.
+  hidden: false
