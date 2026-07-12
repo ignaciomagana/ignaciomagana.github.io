@@ -31,7 +31,7 @@
 }
 .hero__role {
   font-family: var(--font-serif);
-  font-size: clamp(1.15rem, 1rem + 0.8vw, 1.5rem);
+  font-size: clamp(1.15rem, calc(1rem + 0.8vw), 1.5rem);
   font-style: italic;
   color: var(--text-soft);
   margin-bottom: var(--space-2);
@@ -152,7 +152,7 @@
 }
 .stat__num {
   font-family: var(--font-serif);
-  font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.25rem);
+  font-size: clamp(1.6rem, calc(1.2rem + 1.6vw), 2.25rem);
   line-height: 1;
   color: var(--accent);
   margin-bottom: 0.35rem;

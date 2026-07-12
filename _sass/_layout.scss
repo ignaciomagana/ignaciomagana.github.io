@@ -43,7 +43,7 @@
 .site-nav__links {
   display: flex;
   align-items: center;
-  gap: clamp(0.75rem, 0.3rem + 1.4vw, 1.6rem);
+  gap: clamp(0.75rem, calc(0.3rem + 1.4vw), 1.6rem);
   list-style: none;
   margin: 0;
   padding: 0;
