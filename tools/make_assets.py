@@ -79,7 +79,7 @@ def og_image(path):
     caps = ImageFont.truetype(LM + "lmromancaps10-regular.otf", 34 * s)
     d.text((x0, 150 * s), "Research Physicist · Carnegie Mellon University", font=caps, fill=ROSE)
     d.text((x0, 210 * s), "Ignacio Magaña Hernandez", font=bold, fill=ROSE)
-    d.text((x0, 320 * s), "Gravitational-wave astrophysics and cosmology", font=ital, fill=(97, 97, 97))
+    d.text((x0, 320 * s), "Black holes, gravitational waves and the expanding Universe", font=ital, fill=(97, 97, 97))
     pts = chirp_points()
     xw, yc, amp = (W - 180) * s, 440 * s, 26 * s
     d.line([(x0 + x * xw, yc - amp * y) for x, y in pts], fill=ROSE, width=3 * s, joint="curve")

@@ -1,79 +1,83 @@
 # Research themes rendered on the home page and /research/ (refs only on /research/).
-# Order follows the research arc: population structure, cosmology, hosts, formation histories.
-- title: Binary black hole population structure
+# Plain language for a general reader; every claim traces to the CV.
+- title: The masses of merging black holes
   blurb: >-
-    Binned and astrophysically informed Gaussian-process models reconstruct the
-    masses and spins of merging binary black holes without assuming the shape of
-    their distribution. They find evidence for the onset of the pair-instability
-    mass gap near 45&ndash;60&nbsp;M<sub>&#9737;</sub> and hints of
-    subpopulations whose mass spectra differ with spin, but a feature in the mass
-    spectrum does not by itself identify the formation channel that produced it.
-  tags: [Gaussian processes, mass and spin distributions, pair-instability mass gap, selection effects]
+    Flexible statistical models, which let the data rather than a fixed formula
+    decide the shape, map how the masses of merging black holes are spread out
+    and search for distinct groups among them, while correcting for the mergers
+    that detectors are likely to miss. They find evidence for the start of a gap
+    in black hole masses, a range where stars are expected to blow themselves
+    apart and leave no black hole behind, though a feature like this does not by
+    itself reveal how the black holes formed.
+  tags: [black hole masses, flexible statistics, gap in black hole masses, what detectors miss]
   refs:
     - { label: "Ray et al. 2023", arxiv: "2304.08046" }
     - { label: "Ray et al. 2025", arxiv: "2404.03166" }
-    - { label: "Magaña Hernandez & Palmese 2025", arxiv: "2407.02460" }
-    - { label: "Magaña Hernandez & Palmese, pair-instability onset", arxiv: "2508.19208" }
-    - { label: "LISA forecasts", arxiv: "2610.37617" }
+    - { label: "A possible feature near 70 solar masses", arxiv: "2407.02460" }
+    - { label: "Where the mass gap begins", arxiv: "2508.19208" }
+    - { label: "Forecasts for the LISA space mission", arxiv: "2610.37617" }
 
-- title: The Hubble constant from populations and galaxies
+- title: Measuring how fast the Universe expands
   blurb: >-
-    Each merger measures its own distance; the redshift comes either from the
-    detector-frame masses, stretched by a factor (1+z) (spectral sirens), or from
-    candidate host galaxies (dark sirens), so the Hubble constant follows without
-    a distance ladder. Combined with GW170817, the nonparametric spectral-siren
-    analysis of GWTC-4.0 gives a 10% measurement of H<sub>0</sub>, and DESI
-    spectroscopy supplies the galaxy redshifts for the dark-siren measurement.
-  tags: [Hubble constant, spectral sirens, dark sirens, DESI, gwcosmo, darksirens]
+    The gravitational-wave signal from each merger tells how far away it is,
+    while the expansion of the Universe stretches that signal on its way to us
+    and makes the black holes look heavier than they are. Measuring that
+    stretch, either from the overall pattern of black hole masses or from the
+    galaxies that could have hosted the merger (mapped by the DESI galaxy
+    survey), gives the Hubble constant, the rate at which the Universe expands,
+    without the chain of stepwise distance measurements that astronomers usually
+    rely on.
+  tags: [Hubble constant, expanding Universe, black hole masses, galaxy surveys, DESI galaxy survey, open-source software]
   refs:
-    - { label: "GWTC-4.0 spectral sirens", arxiv: "2509.03607" }
+    - { label: "Expansion rate from black hole masses", arxiv: "2509.03607" }
     - { label: "Magaña Hernandez & Ray", arxiv: "2404.02522" }
     - { label: "Gray et al. 2020 (gwcosmo)", arxiv: "1908.06050" }
-    - { label: "GW190814 H<sub>0</sub>", arxiv: "2006.12611" }
+    - { label: "GW190814 (LIGO–Virgo)", arxiv: "2006.12611" }
     - { label: "Dang et al.", arxiv: "2607.17284" }
 
-- title: "Host galaxies: where binary black holes merge"
+- title: The galaxies where black holes merge
   blurb: >-
-    Isolated binaries, dense star clusters and the gas disks of active galactic
-    nuclei can all produce the observed binary black holes, but they place the
-    mergers in different galaxies: prompt mergers in galaxies still forming
-    stars, long-delayed mergers in galaxies that have since stopped, and
-    disk-assembled mergers near active nuclei. Inferring the mix of host-galaxy
-    weightings jointly with H<sub>0</sub> keeps H<sub>0</sub> unbiased in
-    simulated catalogs, and the darksirens framework fits that mix to every
-    cataloged event and to the DESI galaxies around the nearest ones.
-  tags: [host galaxies, star formation, active galactic nuclei, DESI, darksirens]
+    Black hole pairs can form from two stars born together, in crowded star
+    clusters, or in the gas disks around the giant black holes at the centers of
+    some galaxies, and each path tends to place the merger in a different kind
+    of galaxy: quick mergers in galaxies still making stars, late ones in
+    galaxies that have stopped, and disk-made ones near those central black
+    holes. Matching mergers to the galaxies that may host them, including
+    galaxies mapped by DESI, can therefore reveal both how the pairs formed and
+    how fast the Universe expands.
+  tags: [host galaxies, star-forming galaxies, active galaxy centers, DESI galaxy survey]
   refs:
     - { label: "Hostbusters", arxiv: "2610.25866" }
     - { label: "Amsellem et al. 2026", arxiv: "2512.08818" }
     - { label: "Ashton et al. 2021", arxiv: "2009.12346" }
 
-- title: Formation histories and delay times
+- title: From star birth to black hole merger
   blurb: >-
-    A delay between star formation and merger flattens the merger-rate
-    evolution with redshift, while a preference for metal-poor progenitors
-    steepens it, so the two can offset in the rate yet predict different host
-    galaxies. Population synthesis with COSMIC traced GW190814 to viable
-    isolated-binary progenitors through mass transfer, supernova kicks and
-    delays, and current work builds delay-time and metallicity templates that
-    predict both the rate and the hosts.
-  tags: [delay times, metallicity, population synthesis, COSMIC, GW190814]
+    A long wait between the birth of the stars and the merger shifts mergers
+    toward later cosmic times, while a preference for stars poor in heavy
+    elements, which were more common in the early Universe, shifts them earlier,
+    so the two effects can cancel in how often mergers happen yet point to
+    different host galaxies. Computer simulations of how pairs of stars live and
+    die were used to ask how GW190814, an unusually lopsided merger, could have
+    formed from two stars born together.
+  tags: [time to merger, heavy elements in stars, simulations of star pairs, GW190814]
   refs:
     - { label: "Lucky Strikes", arxiv: "2511.16648" }
     - { label: "Ray et al. 2025", arxiv: "2404.03166" }
 
-- title: Counterparts, lensing and tests of gravity
+- title: Lensing, light from mergers and tests of gravity
   blurb: >-
-    Earlier work co-developed Bayesian methods to identify strongly lensed
-    gravitational-wave pairs, used lensed binaries to measure the polarization
-    content of gravitational waves, and constrained the number of spacetime
-    dimensions with GWTC-3. On the multi-messenger side, the gravitational-wave
-    data disfavor the proposed association of FRB&nbsp;20190425A with GW190425,
-    and follow-up of neutron-star merger candidates continues with DESI
-    spectroscopy and GW-MMADS.
-  tags: [multi-messenger, kilonovae, fast radio bursts, strong lensing, tests of GR]
+    Earlier work helped develop ways to recognize a gravitational-wave signal
+    that a galaxy's gravity has bent into several copies (lensing), used such
+    copies to test whether gravitational waves stretch and squeeze space as
+    Einstein's theory predicts, and used black hole mergers to test whether
+    gravity leaks into hidden extra dimensions. Other work asked whether a brief
+    flash of radio waves was linked to the neutron-star merger GW190425, and
+    searches continue, including with DESI, for the light given off when neutron
+    stars (the dense cores of dead stars) collide.
+  tags: [neutron-star collisions, radio flashes, gravitational lensing, tests of Einstein's theory]
   refs:
-    - { label: "GW190425 and FRB 20190425A", arxiv: "2404.02496" }
+    - { label: "A radio flash and GW190425", arxiv: "2404.02496" }
     - { label: "Lo & Magaña Hernandez 2023", arxiv: "2104.09339" }
-    - { label: "Lensed polarizations", arxiv: "2211.01272" }
-    - { label: "Spacetime dimensions", arxiv: "2112.07650" }
+    - { label: "Testing Einstein with lensed signals", arxiv: "2211.01272" }
+    - { label: "Hidden extra dimensions", arxiv: "2112.07650" }

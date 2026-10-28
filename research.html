@@ -3,9 +3,9 @@ layout: home
 title: Research
 permalink: /research/
 description: >-
-  Research on binary black hole populations, the galaxies that host their
-  mergers, formation histories and delay times, and gravitational-wave
-  measurements of the Hubble constant.
+  Research on pairs of black holes: their masses, the galaxies where they
+  merge, how long they take to merge, and how their gravitational waves
+  measure the expansion of the Universe.
 ---
 
 <section class="section section--tight">
@@ -39,10 +39,10 @@ description: >-
   <div class="container">
     <h2 class="rule-head">{% include binary.html %}Software</h2>
     <ul class="software prose">
-      <li><strong>darksirens</strong> (designer and developer): GPU-accelerated (JAX) hierarchical population and cosmological inference for gravitational-wave sirens. <a href="https://github.com/ignaciomagana/darksirens-core">github.com/ignaciomagana/darksirens-core</a></li>
-      <li><strong>gwcat</strong>: preprocessing of GWTC parameter-estimation files and LVK injection sets for darksirens. <a href="https://github.com/ignaciomagana/gwcat">github.com/ignaciomagana/gwcat</a></li>
-      <li><strong>tinyns</strong>: a lightweight JAX nested sampler. <a href="https://github.com/ignaciomagana/tinyns">github.com/ignaciomagana/tinyns</a></li>
-      <li><strong>gwcosmo</strong> (co-developer): LVK gravitational-wave cosmology code. <a href="https://git.ligo.org/lscsoft/gwcosmo">git.ligo.org/lscsoft/gwcosmo</a></li>
+      <li><strong>darksirens</strong> (designer and developer): software that runs on graphics cards to work out the properties of black hole pairs and the expansion rate of the Universe together. <a href="https://github.com/ignaciomagana/darksirens-core">github.com/ignaciomagana/darksirens-core</a></li>
+      <li><strong>gwcat</strong>: prepares the published LIGO–Virgo–KAGRA measurements of each merger, and the simulated signals that show what the detectors can and cannot see, for use in darksirens. <a href="https://github.com/ignaciomagana/gwcat">github.com/ignaciomagana/gwcat</a></li>
+      <li><strong>tinyns</strong>: a small, fast program for fitting models to data and comparing them. <a href="https://github.com/ignaciomagana/tinyns">github.com/ignaciomagana/tinyns</a></li>
+      <li><strong>gwcosmo</strong> (co-developer): the LIGO–Virgo–KAGRA code for measuring the expansion of the Universe with gravitational waves. <a href="https://git.ligo.org/lscsoft/gwcosmo">git.ligo.org/lscsoft/gwcosmo</a></li>
     </ul>
     <p class="muted prose" style="margin-top:1.5rem">
       The full record is on the <a href="{{ '/publications/' | relative_url }}">publications</a>
