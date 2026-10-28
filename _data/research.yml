@@ -9,7 +9,7 @@
     in black hole masses, a range where stars are expected to blow themselves
     apart and leave no black hole behind, though a feature like this does not by
     itself reveal how the black holes formed.
-  tags: [black hole masses, flexible statistics, gap in black hole masses, what detectors miss]
+  tags: [black hole masses, flexible models, gap in black hole masses, what detectors miss]
   refs:
     - { label: "Ray et al. 2023", arxiv: "2304.08046" }
     - { label: "Ray et al. 2025", arxiv: "2404.03166" }
@@ -53,11 +53,9 @@
 
 - title: From star birth to black hole merger
   blurb: >-
-    A long wait between the birth of the stars and the merger shifts mergers
-    toward later cosmic times, while a preference for stars poor in heavy
-    elements, which were more common in the early Universe, shifts them earlier,
-    so the two effects can cancel in how often mergers happen yet point to
-    different host galaxies. Computer simulations of how pairs of stars live and
+    How long a pair of stars takes to become merging black holes, and what
+    those stars were made of, both shape when and where black holes merge.
+    Computer simulations of how pairs of stars live and
     die were used to ask how GW190814, an unusually lopsided merger, could have
     formed from two stars born together.
   tags: [time to merger, heavy elements in stars, simulations of star pairs, GW190814]
@@ -68,13 +66,13 @@
 - title: Lensing, light from mergers and tests of gravity
   blurb: >-
     Earlier work helped develop ways to recognize a gravitational-wave signal
-    that a galaxy's gravity has bent into several copies (lensing), used such
-    copies to test whether gravitational waves stretch and squeeze space as
+    that a galaxy's gravity has bent into several copies (lensing), showed how
+    such copies could test whether gravitational waves stretch and squeeze space as
     Einstein's theory predicts, and used black hole mergers to test whether
     gravity leaks into hidden extra dimensions. Other work asked whether a brief
-    flash of radio waves was linked to the neutron-star merger GW190425, and
-    searches continue, including with DESI, for the light given off when neutron
-    stars (the dense cores of dead stars) collide.
+    flash of radio waves was linked to GW190425, a merger of neutron stars (the
+    dense cores of dead stars), and searches continue, including with DESI, for
+    the light given off when neutron stars collide.
   tags: [neutron-star collisions, radio flashes, gravitational lensing, tests of Einstein's theory]
   refs:
     - { label: "A radio flash and GW190425", arxiv: "2404.02496" }
