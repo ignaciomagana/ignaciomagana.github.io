@@ -1,5 +1,5 @@
 // ---------------------------------------------------------------------------
-//  Design tokens
+//  Design tokens: rosewood, shared with the CV and the research proposal
 // ---------------------------------------------------------------------------
 
 // Breakpoints (SCSS-level, used in media queries)
@@ -9,29 +9,29 @@ $bp-lg: 64rem;   // ~1024px
 
 // Content widths
 $maxw-wide: 60rem;   // page shell
-$maxw-prose: 44rem;  // long-form reading measure
+$maxw-prose: 42rem;  // long-form reading measure
 
 :root {
-  // Palette — light & minimal, single indigo accent
+  // Palette: one rosewood accent on white, gray for secondary text
   --bg:            #ffffff;
-  --surface:       #f7f7f4;   // warm off-white for hero / cards
-  --surface-2:     #f2f2ee;
+  --surface:       #fbf8f9;   // faint rose-tinted white for footer and cards
+  --surface-2:     #f5eef0;
   --text:          #1a1a1a;
-  --text-soft:     #33343a;
-  --muted:         #6b7280;
-  --faint:         #9aa0aa;
-  --border:        #e7e7e2;
-  --hairline:      #ececE8;
+  --text-soft:     #333333;
+  --muted:         #616161;   // the CV's date/location gray
+  --faint:         #8a8a8a;
+  --border:        #ebe3e6;
+  --hairline:      #efe8ea;
 
-  --accent:        #2f3b8f;   // deep indigo
-  --accent-strong: #232a6b;
-  --accent-soft:   rgba(47, 59, 143, 0.07);
-  --accent-line:   rgba(47, 59, 143, 0.22);
+  --accent:        #9e3b57;   // rosewood (#9E3B57), the proposal's accent
+  --accent-strong: #7d2d45;
+  --accent-soft:   rgba(158, 59, 87, 0.07);
+  --accent-line:   rgba(158, 59, 87, 0.30);
+  --cite:          #004d99;   // the proposal's citation blue, for paper links
 
-  // Typography
-  --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
-  --font-sans:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-                Helvetica, Arial, sans-serif;
+  // Typography: Latin Modern throughout, as in the CV and proposal
+  --font-serif: "LM Web", "Latin Modern Roman", "CMU Serif", Georgia, "Times New Roman", serif;
+  --font-caps:  "LM Web Caps", "Latin Modern Roman Caps", var(--font-serif);
   --font-mono:  "SFMono-Regular", "JetBrains Mono", ui-monospace, Menlo,
                 Consolas, monospace;
 
@@ -49,12 +49,11 @@ $maxw-prose: 44rem;  // long-form reading measure
   // Radius & shadow (used very sparingly)
   --radius: 10px;
   --radius-sm: 7px;
-  --shadow-sm: 0 1px 2px rgba(17, 18, 24, 0.04);
-  --shadow:    0 6px 24px -12px rgba(17, 18, 24, 0.16);
+  --shadow-sm: 0 1px 2px rgba(40, 18, 26, 0.05);
+  --shadow:    0 6px 24px -12px rgba(40, 18, 26, 0.18);
 
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-// Keep colours stable if a visitor's browser forces dark; this design is
-// deliberately light-only (per request), so we opt out of UA dark coercion.
+// The design is deliberately light-only (per request), so opt out of UA dark coercion.
 :root { color-scheme: light; }

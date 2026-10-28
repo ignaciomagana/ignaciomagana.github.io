@@ -2,26 +2,20 @@
 layout: home
 title: About
 description: >-
-  Ignacio Magaña Hernandez — Research Physicist at Carnegie Mellon
-  University working on gravitational-wave cosmology, compact-binary
-  populations, and gravitational-wave lensing.
+  Ignacio Magaña Hernandez is a Research Physicist at Carnegie Mellon
+  University studying binary black hole populations, the galaxies that host
+  their mergers, and gravitational-wave measurements of the Hubble constant.
 ---
 
 <!-- ============================== HERO ============================== -->
 <section class="hero">
   <div class="container hero__inner">
     <div class="hero__text">
-      <p class="hero__eyebrow">Research Physicist · Carnegie Mellon</p>
-      <h1 class="hero__name">Ignacio&nbsp;Magaña&nbsp;Hernandez</h1>
-      <p class="hero__role">Gravitational-wave cosmologist</p>
-      <p class="hero__affil">
-        McWilliams Center for Cosmology &amp; Astrophysics, Carnegie Mellon University.
-      </p>
-      <p class="hero__lede">
-        I measure the expansion of the Universe with gravitational-wave
-        <em>standard sirens</em>, and map the hidden population of merging
-        black holes with data-driven statistical methods.
-      </p>
+      <p class="hero__eyebrow">Research Physicist · Carnegie Mellon University</p>
+      <h1 class="hero__name">Ignacio&nbsp;Magaña Hernandez</h1>
+      <p class="hero__role">Gravitational-wave astrophysics and cosmology</p>
+      {% include chirp.html %}
+      <p class="hero__lede">{{ site.tagline }}</p>
       <div class="actions">
         <a class="btn btn--primary" href="{{ '/cv/' | relative_url }}">{% include icon.html name="cv" %} Curriculum Vitae</a>
         <a class="btn" href="mailto:imhernan@andrew.cmu.edu">{% include icon.html name="email" %} Email</a>
@@ -30,25 +24,15 @@ description: >-
     </div>
 
     <div class="hero__art" aria-hidden="true">
-      <svg viewBox="0 0 240 240" class="hero__emblem" role="img" aria-label="Gravitational waves radiating from a binary merger">
-        <defs>
-          <radialGradient id="hg" cx="50%" cy="50%" r="62%">
-            <stop offset="0%" stop-color="#ffffff"/>
-            <stop offset="100%" stop-color="var(--surface)"/>
-          </radialGradient>
-        </defs>
-        <circle cx="120" cy="120" r="118" fill="url(#hg)" stroke="var(--border)"/>
-        <g fill="none" stroke="var(--accent)" stroke-width="1.5"
-           transform="rotate(-22 120 120)">
-          <ellipse cx="120" cy="120" rx="30"  ry="19"  opacity="0.9"/>
-          <ellipse cx="120" cy="120" rx="50"  ry="31"  opacity="0.66"/>
-          <ellipse cx="120" cy="120" rx="70"  ry="43"  opacity="0.46"/>
-          <ellipse cx="120" cy="120" rx="90"  ry="55"  opacity="0.30"/>
-          <ellipse cx="120" cy="120" rx="108" ry="66"  opacity="0.17"/>
-        </g>
-        <g transform="rotate(-22 120 120)">
-          <circle cx="102" cy="120" r="6.5" fill="var(--accent-strong)"/>
-          <circle cx="138" cy="120" r="6.5" fill="var(--accent-strong)"/>
+      <svg viewBox="0 0 240 240" class="hero__emblem" focusable="false">
+        <circle class="ring" cx="120" cy="120" r="116"/>
+        <circle class="ring" cx="120" cy="120" r="116"/>
+        <circle class="ring" cx="120" cy="120" r="116"/>
+        <circle class="ring" cx="120" cy="120" r="116"/>
+        <circle cx="120" cy="120" r="31" fill="none" stroke="currentColor" stroke-opacity="0.25" stroke-dasharray="2 5"/>
+        <g class="pair">
+          <circle cx="98" cy="120" r="13" fill="currentColor"/>
+          <circle cx="155" cy="120" r="8.5" fill="currentColor" fill-opacity="0.6"/>
         </g>
       </svg>
     </div>
@@ -56,31 +40,23 @@ description: >-
 </section>
 
 <!-- ============================== ABOUT ============================== -->
-<section class="section" id="about">
+<section class="section section--flush-top" id="about">
   <div class="container">
+    <h2 class="rule-head">{% include binary.html %}About</h2>
     <div class="prose">
-      <p class="lead">
-        I'm a gravitational-wave astrophysicist working at the intersection of
-        cosmology, compact-object populations, and statistical inference.
-      </p>
       <p>
-        Using the black-hole and neutron-star mergers detected by
-        LIGO–Virgo–KAGRA — together with galaxy surveys like DESI — I develop
-        methods to measure the Hubble constant independently of the traditional
-        cosmic distance ladder, one of the most promising handles on the
-        ongoing <strong>Hubble tension</strong>.
-      </p>
-      <blockquote>
-        Binary black hole mergers are electromagnetically dark — they're called
-        dark sirens — so we need additional information to infer their redshift.
-      </blockquote>
-      <p>
-        As a graduate student I joined the LIGO Scientific Collaboration's main
-        analysis team and co-developed <code>gwcosmo</code>, a tool for
-        measuring the Hubble constant from dark sirens. My current work builds
-        non-parametric population models that let gravitational-wave data speak
-        for themselves — revealing new features in the black-hole mass spectrum
-        and sharpening what mergers can tell us about cosmology and gravity.
+        I am a Research Physicist in the Department of Physics at Carnegie
+        Mellon University, where I was a McWilliams Postdoctoral Fellow from
+        2023 to 2026. I study where binary black holes merge and how long after
+        star formation they do so, combining gravitational-wave population
+        inference with DESI galaxy spectroscopy. My nonparametric population
+        models found evidence for the onset of the pair-instability mass gap,
+        and my spectral-siren analyses measure the Hubble constant from the
+        black-hole mass distribution. I lead the DESI dark-siren analysis and
+        built <code>darksirens</code>, a GPU-accelerated framework for joint
+        population and cosmology inference. During my PhD at the University of
+        Wisconsin–Milwaukee, I co-developed <code>gwcosmo</code> and led the
+        LIGO–Virgo Hubble-constant analysis of GW190814.
       </p>
     </div>
   </div>
@@ -90,14 +66,14 @@ description: >-
 <section class="section section--tight">
   <div class="container">
     <ul class="stats">
-      <li class="stat"><div class="stat__num">76</div><div class="stat__label">Publications</div></li>
-      <li class="stat"><div class="stat__num">44k+</div><div class="stat__label">Citations</div></li>
-      <li class="stat"><div class="stat__num">52</div><div class="stat__label">h-index</div></li>
+      <li class="stat"><div class="stat__num">134</div><div class="stat__label">Papers</div></li>
+      <li class="stat"><div class="stat__num">64k</div><div class="stat__label">Citations</div></li>
+      <li class="stat"><div class="stat__num">78</div><div class="stat__label">h-index</div></li>
     </ul>
-    <p class="muted center" style="margin-top:1rem;font-size:0.85rem">
-      As of July 2026, via
-      <a href="https://inspirehep.net/authors/1902658">INSPIRE-HEP</a>
-      (including LIGO–Virgo–KAGRA collaboration papers).
+    <p class="stats-note center">
+      Including LIGO–Virgo collaboration papers; 39 papers, 2.6k citations and
+      h-index 20 without them. From
+      <a href="https://inspirehep.net/authors/1902658">INSPIRE</a>, October 2026.
     </p>
   </div>
 </section>
@@ -106,11 +82,8 @@ description: >-
 <section class="section" id="research">
   <div class="container">
     <div class="section__head">
-      <div>
-        <p class="section__label">Research</p>
-        <h2>What I work on</h2>
-      </div>
-      <a class="section__more" href="{{ '/research/' | relative_url }}">Read more {% include icon.html name="arrow" %}</a>
+      <h2 class="rule-head">{% include binary.html %}Research</h2>
+      <a class="section__more" href="{{ '/research/' | relative_url }}">More {% include icon.html name="arrow" %}</a>
     </div>
     <div class="themes">
       {% for t in site.data.research %}
@@ -128,10 +101,7 @@ description: >-
 <section class="section" id="selected">
   <div class="container">
     <div class="section__head">
-      <div>
-        <p class="section__label">Selected work</p>
-        <h2>Featured publications</h2>
-      </div>
+      <h2 class="rule-head">{% include binary.html %}Selected papers</h2>
       <a class="section__more" href="{{ '/publications/' | relative_url }}">All publications {% include icon.html name="arrow" %}</a>
     </div>
     <ul class="pub-list">
@@ -146,10 +116,7 @@ description: >-
 <section class="section" id="writing">
   <div class="container">
     <div class="section__head">
-      <div>
-        <p class="section__label">Writing</p>
-        <h2>From the blog</h2>
-      </div>
+      <h2 class="rule-head">{% include binary.html %}From the blog</h2>
       <a class="section__more" href="{{ '/blog/' | relative_url }}">All posts {% include icon.html name="arrow" %}</a>
     </div>
     <ul class="post-list">

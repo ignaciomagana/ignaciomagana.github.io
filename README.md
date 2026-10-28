@@ -12,9 +12,10 @@ Almost everything is driven by data files in [`_data/`](_data/):
 
 | File | Controls |
 |------|----------|
-| `_data/publications.yml` | Every paper. `group:` is `first-author`, `coauthored`, or `collaboration`; add `selected: true` to feature a paper on the home page. |
-| `_data/talks.yml` | Seminars, conference talks, posters, and schools. |
-| `_data/research.yml` | The five research themes (title, blurb, tags). |
+| `_data/publications.yml` | Every paper, **generated from the CV** (see below). `group:` is `first-author`, `student-led`, `coauthored`, or `collaboration`; `selected: true` features a paper on the home page (set in `tools/cv2data.py`). |
+| `_data/talks.yml` | Seminars, contributed talks, and workshops & schools, **generated from the CV**. |
+| `_data/research.yml` | The five research themes (title, blurb, tags, and arXiv refs shown on /research/). |
+| `_data/research_intro.yml` | Title and lead paragraph of /research/. |
 | `_data/social.yml` | Profile links (email, GitHub, ORCID, INSPIRE, X). Set `hidden: true` on any entry to hide it. |
 
 Prose lives in the page files: `index.html` (about/bio), `research.html`,
@@ -34,6 +35,13 @@ a newer machine or just let GitHub Pages build it for you).
 bundle install
 bundle exec jekyll serve --livereload
 # → http://127.0.0.1:4000
+```
+
+On the cluster (Ruby 2.5, no Jekyll), `tools/minijekyll.rb` builds a static preview
+with the same Liquid 4, kramdown and Ruby Sass 3.7.4 engines GitHub Pages uses:
+
+```bash
+ruby -I tools/shim -I ~/.gem/ruby/gems/sass-3.7.4/lib tools/minijekyll.rb . /tmp/site --preview
 ```
 
 ---
@@ -63,12 +71,19 @@ it after editing the source (kept in the sibling `ignaciocv-master/` repo):
 
 ```bash
 pdflatex cv.tex && pdflatex cv.tex          # run twice for cross-refs
-cp cv.pdf /path/to/ignacio-website/assets/cv.pdf
+cp cv.pdf /path/to/ignaciomagana.github.io/assets/cv.pdf
 ```
 
-The metric numbers shown on the site (Publications / Citations / h-index) are
-hard-coded in `index.html` and `publications.html` — update them there when the
-CV numbers change.
+Then regenerate the publication and talk lists from the same `cv.tex`, so the
+site and the CV never disagree:
+
+```bash
+python3 tools/cv2data.py ../ignaciocv-master/cv.tex _data
+```
+
+The metric numbers shown on the site (Papers / Citations / h-index) are
+hard-coded in `index.html` and `publications.html`; update them there when the
+CV's Publication Summary changes.
 
 ---
 
@@ -81,9 +96,11 @@ CV numbers change.
 - **Remove X/Twitter.** Set `hidden: true` on the Twitter entry in
   `_data/social.yml` (and delete the `twitter:`/`x.com` lines in `_config.yml`).
 - **Change the accent color / fonts.** Edit the CSS custom properties at the top
-  of `_sass/_variables.scss`.
-- **Regenerate favicon / social image.** Both live in `assets/img/`
-  (`favicon.svg`, `favicon.png`, `og-image.png`).
+  of `_sass/_variables.scss`. The rosewood accent (#9E3B57) and Latin Modern
+  match the CV and the research proposal.
+- **Regenerate favicon / social image / web fonts.** `python3 tools/make_assets.py .`
+  rewrites `assets/img/favicon.svg`, `favicon.png`, `og-image.png`, the chirp in
+  `_includes/chirp.html`, and the Latin Modern WOFF2 files in `assets/fonts/`.
 
 ---
 
@@ -93,10 +110,12 @@ CV numbers change.
 _config.yml            site settings, plugins, SEO
 _data/                 publications, talks, research, social  ← edit these
 _layouts/              default, home, page, post
-_includes/             head, header, footer, social, icon, pub
-_sass/                 _variables, _base, _layout, _components
+_includes/             head, header, footer, social, icon, pub, binary, chirp
+_sass/                 _variables, _fonts, _base, _layout, _components
 assets/css/main.scss   imports the Sass partials
+assets/fonts/          Latin Modern (WOFF2, GUST Font License)
 assets/img/            favicon + OG image
+tools/                 cv2data.py, make_assets.py, minijekyll.rb (not published)
 assets/cv.pdf          compiled CV
 index.html research.html publications.html talks.html cv.html blog.html
 _posts/                blog posts (Markdown)

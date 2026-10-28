@@ -1,44 +1,79 @@
-# Research themes rendered on the home page and /research/.
-- title: Standard-siren cosmology & the Hubble constant
+# Research themes rendered on the home page and /research/ (refs only on /research/).
+# Order follows the research arc: population structure, cosmology, hosts, formation histories.
+- title: Binary black hole population structure
   blurb: >-
-    Gravitational waves are self-calibrating "standard sirens" that measure
-    cosmic distances without a distance ladder. I develop <em>dark-siren</em>
-    methods that combine binary black hole mergers with galaxy surveys such as
-    DESI, and <em>spectral-siren</em> techniques that read cosmology directly
-    from the mass distribution of merging black holes — independent routes
-    toward resolving the Hubble tension.
-  tags: [Hubble constant, dark sirens, spectral sirens, DESI, gwcosmo]
+    Binned and astrophysically informed Gaussian-process models reconstruct the
+    masses and spins of merging binary black holes without assuming the shape of
+    their distribution. They find evidence for the onset of the pair-instability
+    mass gap near 45&ndash;60&nbsp;M<sub>&#9737;</sub> and hints of
+    subpopulations whose mass spectra differ with spin, but a feature in the mass
+    spectrum does not by itself identify the formation channel that produced it.
+  tags: [Gaussian processes, mass and spin distributions, pair-instability mass gap, selection effects]
+  refs:
+    - { label: "Ray et al. 2023", arxiv: "2304.08046" }
+    - { label: "Ray et al. 2025", arxiv: "2404.03166" }
+    - { label: "Magaña Hernandez & Palmese 2025", arxiv: "2407.02460" }
+    - { label: "Magaña Hernandez & Palmese, pair-instability onset", arxiv: "2508.19208" }
+    - { label: "LISA forecasts", arxiv: "2610.37617" }
 
-- title: Compact-binary populations
+- title: The Hubble constant from populations and galaxies
   blurb: >-
-    What is the true distribution of black hole masses, spins, and redshifts?
-    I build non-parametric, data-driven population models — including
-    Gaussian-process methods — that let the data reveal structure without
-    imposing a functional form. This work surfaced a new over-density near
-    70&nbsp;M<sub>&#9737;</sub> and evidence for the onset of the
-    pair-instability supernova mass gap.
-  tags: [populations, Gaussian processes, black hole mass function, pair instability]
+    Each merger measures its own distance; the redshift comes either from the
+    detector-frame masses, stretched by a factor (1+z) (spectral sirens), or from
+    candidate host galaxies (dark sirens), so the Hubble constant follows without
+    a distance ladder. Combined with GW170817, the nonparametric spectral-siren
+    analysis of GWTC-4.0 gives a 10% measurement of H<sub>0</sub>, and DESI
+    spectroscopy supplies the galaxy redshifts for the dark-siren measurement.
+  tags: [Hubble constant, spectral sirens, dark sirens, DESI, gwcosmo, darksirens]
+  refs:
+    - { label: "GWTC-4.0 spectral sirens", arxiv: "2509.03607" }
+    - { label: "Magaña Hernandez & Ray", arxiv: "2404.02522" }
+    - { label: "Gray et al. 2020 (gwcosmo)", arxiv: "1908.06050" }
+    - { label: "GW190814 H<sub>0</sub>", arxiv: "2006.12611" }
+    - { label: "Dang et al.", arxiv: "2607.17284" }
 
-- title: Gravitational-wave lensing
+- title: "Host galaxies: where binary black holes merge"
   blurb: >-
-    Gravitational lensing of gravitational waves is an emerging frontier. I
-    created Bayesian frameworks to identify strongly lensed signal pairs in
-    LIGO–Virgo data, and I use lensed binaries to probe the polarization
-    content of gravitational waves and to test general relativity itself.
-  tags: [strong lensing, tests of GR, polarization]
+    Isolated binaries, dense star clusters and the gas disks of active galactic
+    nuclei can all produce the observed binary black holes, but they place the
+    mergers in different galaxies: prompt mergers in galaxies still forming
+    stars, long-delayed mergers in galaxies that have since stopped, and
+    disk-assembled mergers near active nuclei. Inferring the mix of host-galaxy
+    weightings jointly with H<sub>0</sub> keeps H<sub>0</sub> unbiased in
+    simulated catalogs, and the darksirens framework fits that mix to every
+    cataloged event and to the DESI galaxies around the nearest ones.
+  tags: [host galaxies, star formation, active galactic nuclei, DESI, darksirens]
+  refs:
+    - { label: "Hostbusters", arxiv: "2610.25866" }
+    - { label: "Amsellem et al. 2026", arxiv: "2512.08818" }
+    - { label: "Ashton et al. 2021", arxiv: "2009.12346" }
 
-- title: Multi-messenger astrophysics
+- title: Formation histories and delay times
   blurb: >-
-    Connecting gravitational waves to their electromagnetic and radio
-    counterparts. I have investigated candidate fast-radio-burst associations,
-    kilonova follow-up of neutron-star merger candidates, and joint ranking
-    statistics that quantify when a coincident signal is astrophysically real.
-  tags: [multi-messenger, kilonovae, fast radio bursts, GW-MMADS]
+    A delay between star formation and merger flattens the merger-rate
+    evolution with redshift, while a preference for metal-poor progenitors
+    steepens it, so the two can offset in the rate yet predict different host
+    galaxies. Population synthesis with COSMIC traced GW190814 to viable
+    isolated-binary progenitors through mass transfer, supernova kicks and
+    delays, and current work builds delay-time and metallicity templates that
+    predict both the rate and the hosts.
+  tags: [delay times, metallicity, population synthesis, COSMIC, GW190814]
+  refs:
+    - { label: "Lucky Strikes", arxiv: "2511.16648" }
+    - { label: "Ray et al. 2025", arxiv: "2404.03166" }
 
-- title: Tests of gravity & fundamental physics
+- title: Counterparts, lensing and tests of gravity
   blurb: >-
-    Gravitational waves are precision probes of gravity across cosmological
-    distances. I have constrained the number of spacetime dimensions from the
-    GWTC-3 catalog and tested modified gravitational-wave propagation
-    ("friction") predicted by alternatives to general relativity and ΛCDM.
-  tags: [modified gravity, extra dimensions, GW propagation]
+    Earlier work co-developed Bayesian methods to identify strongly lensed
+    gravitational-wave pairs, used lensed binaries to measure the polarization
+    content of gravitational waves, and constrained the number of spacetime
+    dimensions with GWTC-3. On the multi-messenger side, the gravitational-wave
+    data disfavor the proposed association of FRB&nbsp;20190425A with GW190425,
+    and follow-up of neutron-star merger candidates continues with DESI
+    spectroscopy and GW-MMADS.
+  tags: [multi-messenger, kilonovae, fast radio bursts, strong lensing, tests of GR]
+  refs:
+    - { label: "GW190425 and FRB 20190425A", arxiv: "2404.02496" }
+    - { label: "Lo & Magaña Hernandez 2023", arxiv: "2104.09339" }
+    - { label: "Lensed polarizations", arxiv: "2211.01272" }
+    - { label: "Spacetime dimensions", arxiv: "2112.07650" }

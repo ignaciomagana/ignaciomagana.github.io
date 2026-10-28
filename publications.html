@@ -3,29 +3,29 @@ layout: home
 title: Publications
 permalink: /publications/
 description: >-
-  Publications by Ignacio Magaña Hernandez on gravitational-wave cosmology,
-  compact-binary populations, and gravitational-wave lensing.
+  Publications by Ignacio Magaña Hernandez on gravitational-wave astrophysics
+  and cosmology: binary black hole populations, host galaxies, and the Hubble constant.
 ---
 
-<section class="section">
+<section class="section section--tight">
   <div class="container">
-    <p class="section__label">Publications</p>
+    <p class="section__label">Papers &amp; preprints</p>
     <h1>Publications</h1>
     <p class="lead prose">
-      Selected first-author and co-authored work below. A complete and
-      continuously updated list — including LIGO–Virgo–KAGRA collaboration
-      papers — is available on
-      <a href="https://inspirehep.net/authors/1902658">INSPIRE-HEP</a>.
+      The same list as my CV, with citations from
+      <a href="https://inspirehep.net/authors/1902658">INSPIRE</a>, which also
+      holds the full LIGO–Virgo collaboration record.
     </p>
 
     <ul class="stats" style="margin-top:2rem;max-width:34rem">
-      <li class="stat"><div class="stat__num">76</div><div class="stat__label">Papers</div></li>
-      <li class="stat"><div class="stat__num">44k+</div><div class="stat__label">Citations</div></li>
-      <li class="stat"><div class="stat__num">52</div><div class="stat__label">h-index</div></li>
+      <li class="stat"><div class="stat__num">134</div><div class="stat__label">Papers</div></li>
+      <li class="stat"><div class="stat__num">64k</div><div class="stat__label">Citations</div></li>
+      <li class="stat"><div class="stat__num">78</div><div class="stat__label">h-index</div></li>
     </ul>
-    <p class="muted" style="margin-top:0.9rem;font-size:0.85rem">
-      Metrics as of July 2026 via INSPIRE-HEP (incl. collaboration papers);
-      excluding large collaboration papers: 30 papers, h-index 16.
+    <p class="stats-note">
+      Including LIGO–Virgo collaboration papers. Without them: 39 papers,
+      2.6k citations, h-index 20; first- and second-author papers (excluding
+      student-led): 14 papers, 785 citations, h-index 12. INSPIRE, October 2026.
     </p>
   </div>
 </section>
@@ -34,33 +34,32 @@ description: >-
   <div class="container">
 
     {% assign firsts = site.data.publications | where: "group", "first-author" %}
-    {% if firsts.size > 0 %}
-      <h2 class="pub-group__title">First &amp; second author</h2>
-      <ul class="pub-list">
-        {% for pub in firsts %}{% include pub.html pub=pub %}{% endfor %}
-      </ul>
-    {% endif %}
+    <h2 class="pub-group__title">{% include binary.html %}First &amp; second author</h2>
+    <ul class="pub-list">
+      {% for pub in firsts %}{% include pub.html pub=pub %}{% endfor %}
+    </ul>
+
+    {% assign students = site.data.publications | where: "group", "student-led" %}
+    <h2 class="pub-group__title">{% include binary.html %}Led by students I mentor</h2>
+    <ul class="pub-list">
+      {% for pub in students %}{% include pub.html pub=pub %}{% endfor %}
+    </ul>
 
     {% assign co = site.data.publications | where: "group", "coauthored" %}
-    {% if co.size > 0 %}
-      <h2 class="pub-group__title">Selected co-authored</h2>
-      <ul class="pub-list">
-        {% for pub in co %}{% include pub.html pub=pub %}{% endfor %}
-      </ul>
-    {% endif %}
+    <h2 class="pub-group__title">{% include binary.html %}Co-authored</h2>
+    <ul class="pub-list">
+      {% for pub in co %}{% include pub.html pub=pub %}{% endfor %}
+    </ul>
 
     {% assign collab = site.data.publications | where: "group", "collaboration" %}
-    {% if collab.size > 0 %}
-      <h2 class="pub-group__title">LIGO–Virgo–KAGRA papers I led or strongly contributed to</h2>
-      <ul class="pub-list">
-        {% for pub in collab %}{% include pub.html pub=pub %}{% endfor %}
-      </ul>
-    {% endif %}
-
-    <p class="muted" style="margin-top:2.5rem">
-      → Full list on
-      <a href="https://inspirehep.net/authors/1902658">INSPIRE-HEP</a>
-      · <a href="https://orcid.org/0000-0003-2362-0459">ORCID</a>
+    <h2 class="pub-group__title">{% include binary.html %}LIGO–Virgo papers with major personal contributions</h2>
+    <ul class="pub-list">
+      {% for pub in collab %}{% include pub.html pub=pub %}{% endfor %}
+    </ul>
+    <p class="muted">
+      Co-author of 92 further LIGO–Virgo collaboration papers, listed on
+      <a href="https://inspirehep.net/authors/1902658">INSPIRE</a> and
+      <a href="https://orcid.org/0000-0003-2362-0459">ORCID</a>.
     </p>
   </div>
 </section>

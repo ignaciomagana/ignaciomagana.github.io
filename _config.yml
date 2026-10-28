@@ -1,17 +1,17 @@
 # --- Site identity -----------------------------------------------------------
 title: Ignacio Magaña Hernandez
-tagline: Gravitational-wave cosmologist
+tagline: Where binary black holes form and merge, and the Hubble constant they measure.
 description: >-
-  Ignacio Magaña Hernandez is a McWilliams Postdoctoral Fellow at Carnegie
-  Mellon University working on gravitational-wave cosmology, compact-binary
-  populations, and strong gravitational-wave lensing.
+  Ignacio Magaña Hernandez is a Research Physicist at Carnegie Mellon
+  University studying binary black hole populations, the galaxies that host
+  their mergers, and gravitational-wave measurements of the Hubble constant.
 author:
   name: Ignacio Magaña Hernandez
   email: imhernan@andrew.cmu.edu
 
-# Full role / affiliation used in the hero and page metadata
-role: McWilliams Postdoctoral Fellow
-affiliation: McWilliams Center for Cosmology & Astrophysics
+# Full role / affiliation used in the footer and page metadata (matches the CV header)
+role: Research Physicist
+affiliation: Department of Physics
 institution: Carnegie Mellon University
 
 # --- URLs --------------------------------------------------------------------
@@ -75,3 +75,4 @@ exclude:
   - README.md
   - .sass-cache
   - .jekyll-cache
+  - tools

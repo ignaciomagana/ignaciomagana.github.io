@@ -1,20 +1,20 @@
 <footer class="site-footer">
   <div class="container">
+    {% include chirp.html %}
     <div class="site-footer__grid">
       <div class="site-footer__meta">
         <div class="site-footer__name">Ignacio Magaña Hernandez</div>
         {{ site.role }}<br>
-        {{ site.affiliation }}<br>
-        {{ site.institution }} · Pittsburgh, PA
+        {{ site.affiliation }}, {{ site.institution }}<br>
+        5000 Forbes Ave, Pittsburgh, PA 15213
       </div>
       <div class="site-footer__meta">
-        <div class="site-footer__name" style="font-size:1rem">Elsewhere</div>
         {% include social.html %}
       </div>
     </div>
     <div class="site-footer__bottom">
       <span>© {{ 'now' | date: "%Y" }} Ignacio Magaña Hernandez</span>
-      <span>Built with Jekyll · <a href="{{ '/feed.xml' | relative_url }}">RSS</a></span>
+      <span>Set in Latin Modern · Built with Jekyll · <a href="{{ '/feed.xml' | relative_url }}">RSS</a></span>
     </div>
   </div>
 </footer>

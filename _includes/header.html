@@ -1,7 +1,7 @@
 {%- assign u = page.url | remove_first: site.baseurl -%}
 <header class="site-nav">
   <nav class="container site-nav__inner" aria-label="Primary">
-    <a class="site-nav__brand" href="{{ '/' | relative_url }}">Ignacio&nbsp;Magaña&nbsp;Hernandez</a>
+    <a class="site-nav__brand" href="{{ '/' | relative_url }}">{% include binary.html %}<span class="site-nav__name">Ignacio&nbsp;Magaña&nbsp;Hernandez</span></a>
     <ul class="site-nav__links">
       <li><a href="{{ '/' | relative_url }}"{% if u == "/" %} aria-current="page"{% endif %}>About</a></li>
       <li><a href="{{ '/research/' | relative_url }}"{% if u contains "/research" %} aria-current="page"{% endif %}>Research</a></li>

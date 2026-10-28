@@ -1,15 +1,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#9e3b57">
 
 {%- comment -%} SEO, canonical, Open Graph, Twitter cards {%- endcomment -%}
 {% seo %}
 
-{%- comment -%} Fonts {%- endcomment -%}
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+{%- comment -%} Fonts: Latin Modern, self-hosted (see assets/fonts) {%- endcomment -%}
+<link rel="preload" href="{{ '/assets/fonts/lmweb-regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ '/assets/fonts/lmweb-bold.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 
 {%- comment -%} Styles {%- endcomment -%}
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">

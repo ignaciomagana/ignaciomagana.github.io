@@ -1,5 +1,5 @@
 // ---------------------------------------------------------------------------
-//  Layout: shell, nav, sections, footer
+//  Layout: container, nav, sections, footer
 // ---------------------------------------------------------------------------
 
 .container {
@@ -14,12 +14,12 @@
 
 .prose { max-width: $maxw-prose; }
 
-// --- Site nav ---------------------------------------------------------------
+// --- Navigation -----------------------------------------------------------
 .site-nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: saturate(1.4) blur(10px);
   -webkit-backdrop-filter: saturate(1.4) blur(10px);
   border-bottom: 1px solid var(--hairline);
@@ -32,26 +32,29 @@
   height: 4rem;
 }
 .site-nav__brand {
-  font-family: var(--font-serif);
-  font-size: 1.12rem;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent);
   white-space: nowrap;
-  &:hover { color: var(--accent); text-decoration: none; }
+  &:hover { color: var(--accent-strong); text-decoration: none; }
 }
+.site-nav__brand .binary { width: 1.6rem; height: 1.6rem; }
 .site-nav__links {
   display: flex;
   align-items: center;
-  gap: clamp(0.75rem, calc(0.3rem + 1.4vw), 1.6rem);
+  gap: clamp(0.8rem, calc(0.3rem + 1.4vw), 1.6rem);
   list-style: none;
   margin: 0;
   padding: 0;
 }
 .site-nav__links a {
+  font-family: var(--font-caps);
   color: var(--text-soft);
-  font-size: 0.94rem;
-  font-weight: 500;
+  font-size: 1.02rem;
+  letter-spacing: 0.03em;
   padding: 0.35rem 0;
   position: relative;
   &:hover { color: var(--accent); text-decoration: none; }
@@ -59,53 +62,80 @@
   &[aria-current="page"]::after {
     content: "";
     position: absolute;
-    left: 0; right: 0; bottom: -2px;
-    height: 2px;
+    left: 0; right: 0; bottom: -1px;
+    height: 1.5px;
     background: var(--accent);
     border-radius: 2px;
   }
 }
-// On small screens, hide secondary links and keep the essentials
+@media (max-width: $bp-md) {
+  .site-nav__brand .site-nav__name { display: none; }
+}
 @media (max-width: $bp-sm) {
-  .site-nav__links { gap: 0.9rem; }
+  .site-nav__links { gap: 0.85rem; }
   .site-nav__links .nav-optional { display: none; }
 }
 
-// --- Page sections ----------------------------------------------------------
+// --- Sections -------------------------------------------------------------
 .section { padding-block: var(--space-8); }
-.section + .section { border-top: 1px solid var(--hairline); }
-.section--tight { padding-block: var(--space-7); }
+.section--tight { padding-block: var(--space-6); }
+.section--flush-top { padding-top: 0; }
 
+// Small-caps eyebrow above page titles
 .section__label {
-  font-family: var(--font-sans);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  font-family: var(--font-caps);
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
   color: var(--accent);
-  margin: 0 0 var(--space-3);
+  margin: 0 0 var(--space-2);
 }
-.section__title { margin-bottom: var(--space-5); }
+
+// Section heading as in the CV: binary glyph, rosewood title, hairline rule
+.rule-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 var(--space-5);
+  font-size: clamp(1.4rem, calc(1.15rem + 1vw), 1.8rem);
+  color: var(--accent);
+}
+.rule-head .binary { width: 1.5rem; height: 1.5rem; flex: none; }
+.rule-head::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--accent-line);
+  margin-left: 0.4rem;
+}
+.rule-head--small { font-size: 1.3rem; margin-top: var(--space-7); }
+.rule-head--small:first-child { margin-top: 0; }
 
 .section__head {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+  align-items: center;
   gap: var(--space-4);
   margin-bottom: var(--space-5);
-  flex-wrap: wrap;
 }
-.section__head h2 { margin: 0; }
-.section__more { font-size: 0.92rem; font-weight: 500; white-space: nowrap; }
+.section__head .rule-head { flex: 1; margin: 0; }
+.section__more {
+  font-size: 1rem;
+  font-style: italic;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.section__more svg { width: 1rem; height: 1rem; }
 
-// --- Footer -----------------------------------------------------------------
+// --- Footer ---------------------------------------------------------------
 .site-footer {
-  border-top: 1px solid var(--hairline);
+  margin-top: var(--space-7);
   background: var(--surface);
-  padding-block: var(--space-7);
+  padding-block: var(--space-6) var(--space-5);
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 1rem;
 }
+.site-footer .chirp { color: var(--accent-line); margin-bottom: var(--space-5); }
 .site-footer__grid {
   display: flex;
   flex-wrap: wrap;
@@ -114,20 +144,20 @@
   justify-content: space-between;
 }
 .site-footer__name {
-  font-family: var(--font-serif);
   font-size: 1.15rem;
-  color: var(--text);
+  font-weight: 700;
+  color: var(--accent);
   margin-bottom: 0.15rem;
 }
 .site-footer__meta { line-height: 1.5; }
 .site-footer__bottom {
-  margin-top: var(--space-6);
+  margin-top: var(--space-5);
   padding-top: var(--space-4);
   border-top: 1px solid var(--hairline);
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-3) var(--space-5);
   justify-content: space-between;
-  font-size: 0.85rem;
+  font-size: 0.92rem;
   color: var(--faint);
 }

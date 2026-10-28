@@ -3,18 +3,17 @@ layout: home
 title: Talks
 permalink: /talks/
 description: >-
-  Invited seminars, conference talks, posters, and schools by Ignacio Magaña
-  Hernandez on gravitational-wave cosmology and populations.
+  Invited seminars, conference talks and schools by Ignacio Magaña Hernandez on
+  gravitational-wave astrophysics and cosmology.
 ---
 
-<section class="section">
+<section class="section section--tight">
   <div class="container">
     <p class="section__label">Talks &amp; seminars</p>
     <h1>Talks</h1>
     <p class="lead prose">
-      Invited seminars and colloquia, conference presentations, posters, and
-      schools — spanning gravitational-wave cosmology, compact-binary
-      populations, lensing, and tests of gravity.
+      Invited seminars, conference talks, and the workshops and schools I have
+      attended.
     </p>
   </div>
 </section>
@@ -22,7 +21,7 @@ description: >-
 <section class="section section--tight">
   <div class="container">
 
-    <h2 class="pub-group__title">Invited seminars &amp; colloquia</h2>
+    <h2 class="pub-group__title">{% include binary.html %}Invited seminars</h2>
     <ul class="talks">
       {% for t in site.data.talks.seminars %}
       <li class="talk">
@@ -33,7 +32,7 @@ description: >-
       {% endfor %}
     </ul>
 
-    <h2 class="pub-group__title">Conference &amp; workshop talks</h2>
+    <h2 class="pub-group__title">{% include binary.html %}Contributed talks</h2>
     <ul class="talks">
       {% for t in site.data.talks.conferences %}
       <li class="talk">
@@ -44,18 +43,7 @@ description: >-
       {% endfor %}
     </ul>
 
-    <h2 class="pub-group__title">Posters</h2>
-    <ul class="talks">
-      {% for t in site.data.talks.posters %}
-      <li class="talk">
-        <span class="talk__venue">{{ t.venue }}</span>
-        <span class="talk__date">{{ t.date }}</span>
-        <span class="talk__title">{{ t.title }}</span>
-      </li>
-      {% endfor %}
-    </ul>
-
-    <h2 class="pub-group__title">Schools &amp; long-form workshops</h2>
+    <h2 class="pub-group__title">{% include binary.html %}Workshops &amp; schools</h2>
     <ul class="talks">
       {% for t in site.data.talks.schools %}
       <li class="talk">

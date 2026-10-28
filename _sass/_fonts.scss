@@ -1,0 +1,30 @@
+// ---------------------------------------------------------------------------
+//  Latin Modern Roman (GUST e-foundry), served as renamed WOFF2 copies.
+//  See assets/fonts/LICENSE-latin-modern.txt.
+// ---------------------------------------------------------------------------
+
+@font-face {
+  font-family: "LM Web";
+  src: url("../fonts/lmweb-regular.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "LM Web";
+  src: url("../fonts/lmweb-italic.woff2") format("woff2");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "LM Web";
+  src: url("../fonts/lmweb-bold.woff2") format("woff2");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "LM Web";
+  src: url("../fonts/lmweb-bolditalic.woff2") format("woff2");
+  font-weight: 700; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "LM Web Caps";
+  src: url("../fonts/lmweb-caps.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
