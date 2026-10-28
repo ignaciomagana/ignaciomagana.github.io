@@ -1,7 +1,7 @@
 # ---------------------------------------------------------------------------
 #  Publications, generated from cv.tex by cv2data.py (do not edit by hand).
 #  `me` defaults to "I. Magaña Hernandez" (bolded in author lists).
-#  group: first-author | student-led | coauthored | collaboration
+#  group: first-author | student-led | coauthored | collaboration | in-prep
 #  selected: true  -> also featured on the home page
 #  Full record: https://inspirehep.net/authors/1902658
 # ---------------------------------------------------------------------------
@@ -361,3 +361,25 @@
   arxiv: "1901.01540"
   cites: 381
   note: "Cross-checked the H<sub>0</sub> result with <code>gwcosmo</code>"
+
+
+# ===== In preparation =====
+- group: "in-prep"
+  title: "Spectroscopic dark sirens: the Hubble constant from the binary black holes of GWTC-5 and DESI"
+  authors: "I. Magaña Hernandez, A. Palmese et al. (DESI Collaboration paper)"
+  status: "In preparation"
+
+- group: "in-prep"
+  title: "A common effective-spin mixture across mass, mass ratio, and redshift in GWTC-5"
+  authors: "I. Magaña Hernandez and A. Palmese"
+  status: "In preparation"
+
+- group: "in-prep"
+  title: "Multitracer dark sirens: joint inference of the Hubble constant and the AGN-hosted merger fraction"
+  authors: "I. Magaña Hernandez, K. Storey-Fisher and A. Palmese"
+  status: "In preparation"
+
+- group: "in-prep"
+  title: "Hostbusters II: how binary black hole masses and spins depend on their host galaxies"
+  authors: "I. Magaña Hernandez et al."
+  status: "In preparation"

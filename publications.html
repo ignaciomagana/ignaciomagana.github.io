@@ -25,7 +25,7 @@ description: >-
     <p class="stats-note">
       Including LIGO–Virgo collaboration papers. Without them: 39 papers,
       2.6k citations, h-index 20; first- and second-author papers (excluding
-      student-led): 14 papers, 785 citations, h-index 12. INSPIRE, October 2026.
+      student-led): 14 papers, 785 citations, h-index 12. INSPIRE, October 2026. Papers in preparation are not counted.
     </p>
   </div>
 </section>
@@ -61,5 +61,13 @@ description: >-
       <a href="https://inspirehep.net/authors/1902658">INSPIRE</a> and
       <a href="https://orcid.org/0000-0003-2362-0459">ORCID</a>.
     </p>
+
+    {% assign prep = site.data.publications | where: "group", "in-prep" %}
+    {% if prep.size > 0 %}
+    <h2 class="pub-group__title">{% include binary.html %}In preparation</h2>
+    <ul class="pub-list">
+      {% for pub in prep %}{% include pub.html pub=pub %}{% endfor %}
+    </ul>
+    {% endif %}
   </div>
 </section>

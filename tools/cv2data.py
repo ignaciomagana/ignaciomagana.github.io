@@ -79,11 +79,12 @@ def parse_pubs(tex):
     groups = {"First/Second Author Publications": "first-author",
               "Student-Led Publications": "student-led",
               "Other Publications": "coauthored",
-              "LIGO--Virgo Collaboration Papers with Major Personal Contributions": "collaboration"}
+              "LIGO--Virgo Collaboration Papers with Major Personal Contributions": "collaboration",
+              "Papers in Preparation": "in-prep"}
     heads = [(m.start(), groups[m.group(1)]) for m in
              re.finditer(r"\\resheading(?:Author)?\{([^{}]*)\}", tex) if m.group(1) in groups]
     pubs = []
-    for m in re.finditer(r"\\publication(Arxiv|Journal|LVK)(?![A-Za-z])", tex):
+    for m in re.finditer(r"\\publication(Arxiv|Journal|LVK|Prep)(?![A-Za-z])", tex):
         if tex[m.start() - 1:m.start()] == "{" or tex[m.end():m.end() + 1] == "}":
             continue  # the \newcommand definitions
         kind, i = m.group(1), m.end()
@@ -94,6 +95,12 @@ def parse_pubs(tex):
         elif kind == "Journal":
             _, (title, authors, venue, url, label, cites), i = args(tex, i, 6)
             note = None
+        elif kind == "Prep":
+            _, (title, authors, status), i = args(tex, i, 3)
+            # In-prep papers: no year, arXiv number or citations; drop the CV's parenthetical
+            pubs.append({"group": group, "title": tex2html(title), "authors": tex2html(authors),
+                         "status": tex2html(status).split(" (")[0]})
+            continue
         else:
             _, (title, authors, venue, url, label, cites, note), i = args(tex, i, 7)
         rest = tex[i:i + 80]
@@ -147,11 +154,12 @@ def main():
     out = sys.argv[2]
     pubs = parse_pubs(tex)
     titles = {"first-author": "First & second author", "student-led": "Led by students I mentor",
-              "coauthored": "Co-authored", "collaboration": "LIGO–Virgo papers with major personal contributions"}
+              "coauthored": "Co-authored", "collaboration": "LIGO–Virgo papers with major personal contributions",
+              "in-prep": "In preparation"}
     lines = ["# ---------------------------------------------------------------------------",
              "#  Publications, generated from cv.tex by cv2data.py (do not edit by hand).",
              "#  `me` defaults to \"I. Magaña Hernandez\" (bolded in author lists).",
-             "#  group: first-author | student-led | coauthored | collaboration",
+             "#  group: first-author | student-led | coauthored | collaboration | in-prep",
              "#  selected: true  -> also featured on the home page",
              "#  Full record: https://inspirehep.net/authors/1902658",
              "# ---------------------------------------------------------------------------"]
